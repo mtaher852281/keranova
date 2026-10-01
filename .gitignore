@@ -1,28 +1,9 @@
 # Added by code-review-graph
-# Publish only the explicitly reviewed files and directories below.
-# New top-level paths must be deliberately added to this allowlist.
-/*
-!/.gitignore
-!/.gitattributes
-!/README.md
-!/AGENTS.md
-!/requirements.txt
-!/1. Methodology.docx
-!/2. Data_Collection_Sheet.docx
-!/3. Data_Variable_Mapping_Sheet.docx
-!/4. Data_Cleaning_Rules.docx
-!/5. Data_Transformation_Template.docx
-!/6. Statistical_Plan.docx
-!/7. Dummy_Tables_and_Figures.docx
-!/KeraNova_Committee_Package_2026-10-01.zip
-!/KeraNova_Submission/
-!/protocol_sources/
-!/scripts/
-
-**/__pycache__/
-**/*.py[cod]
-**/~$*
-**/.env
-**/.env.*
-**/*.pem
-**/*.key
+# The owner requested publication of the complete project folder.
+# Exclude Git internals, the rebuildable graph database and credentials only.
+.git/
+.code-review-graph/
+.env
+.env.*
+*.pem
+*.key

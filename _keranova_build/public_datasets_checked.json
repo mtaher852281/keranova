@@ -1,0 +1,261 @@
+{
+    "project": "KeraNova",
+    "checked_date": "2026-10-01",
+    "objective": "Baseline prediction of nominal 12-month corrected distance visual acuity after keratoconus treatment; primary institutional comparison remains TG-PRK plus accelerated CXL versus accelerated CXL alone.",
+    "search_conclusion": "No verified open dataset matching both specified treatment cohorts, linked baseline predictors, dated 10-14-month CDVA and paired images was found in this search. Public diagnostic imaging datasets cannot supply missing postoperative outcome labels.",
+    "recommendation": {
+        "best_open_outcome_source": "wajnsztajn_2022",
+        "best_open_image_source": "cornorb",
+        "long_term_multimodal_source": "cadmus",
+        "scope": "Use the PLOS source only as a separately labelled external CXL feasibility cohort. Do not merge it with KKESH records, relabel conventional CXL as TG-PRK, or claim external validation before running a prespecified evaluation.",
+        "available_nominal_one_year_pairs": 334,
+        "available_patients_with_pairs": 251,
+        "next_step": "Review the one patient with three records, absent laterality and correction-method labels; map source endpoints and predictors; run patient-grouped validation only after the external cohort's eligibility and endpoint are frozen. Nominal 1Y is not proof of the institutional 10-14-month calendar window."
+    },
+    "candidates": [
+        {
+            "rank": 1,
+            "id": "wajnsztajn_2022",
+            "title": "Predicting factors for the efficacy of cross-linking for keratoconus: S1 Data",
+            "repository_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263528",
+            "dataset_url": "https://doi.org/10.1371/journal.pone.0263528.s005",
+            "download_url": "https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0263528.s005&type=supplementary",
+            "paper_doi": "10.1371/journal.pone.0263528",
+            "paper_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263528",
+            "access": "Open publisher supplementary XLSX; downloaded and schema checked",
+            "license": "Article and supporting publication carry the Creative Commons Attribution licence; verify the publisher's current licence terms when redistributing.",
+            "patients": 456,
+            "eye_records": 613,
+            "image_count": 0,
+            "modalities": [
+                "tabular clinical",
+                "numeric corneal topography/tomography"
+            ],
+            "labels": [
+                "CXL accelerated versus non-accelerated",
+                "epithelium-on/off",
+                "baseline and nominal 1Y BCVA/logMAR",
+                "Kmax",
+                "haze/complications"
+            ],
+            "longitudinal": "Nominal 3M, 6M, 1Y and later annual columns; paper primary analysis uses last available follow-up of at least one year.",
+            "treatments": "CXL protocols only; no verified TG-PRK plus CXL comparator",
+            "outcome_counts_verified_from_file": {
+                "numeric_baseline_logmar": 608,
+                "numeric_nominal_1Y_logmar": 336,
+                "numeric_baseline_and_1Y_pairs": 334,
+                "patients_with_pairs": 251,
+                "paired_accelerated_records": 221,
+                "paired_nonaccelerated_records": 113,
+                "nominal_1Y_decimal_to_logmar_checked": 336,
+                "conversion_mismatches_at_tolerance_0_000001": 0
+            },
+            "limitations": [
+                "Visit dates and laterality absent; the 10-14-month window cannot be verified",
+                "One source patient identifier has three rows",
+                "79 numeric last-follow-up durations are negative and require source review",
+                "Whitespace strings encode missing values",
+                "Correction-method labels need review before harmonizing spectacle CDVA",
+                "No linked images",
+                "Paper's 385 last-follow-up LogMAR analyses differ from nominal 1Y availability"
+            ],
+            "primary_study_exact_match": false,
+            "recommended_use": "Separate external CXL-only nominal-one-year prediction feasibility cohort after source checks",
+            "local_raw_path": "C:/Users/user/Desktop/Hackathon/Public_Datasets/Wajnsztajn_2022_CXL_raw.xlsx",
+            "raw_bytes": 691872,
+            "raw_sha256": "6ec96883486680c65944790272a5879744f3f747e4ba4fb02c3c359bb1ecfcbc",
+            "local_derivative_path": "C:/Users/user/Desktop/Hackathon/Public_Datasets/Wajnsztajn_2022_CXL_research_derivative.csv",
+            "derivative_sha256": "bedb65d905a73a81a5b4ecc724fa2665132e590aa795ff24a184779a677099aa",
+            "derivative_provenance": "613 rows; PLSP/PLSR pseudonymous keys; original source ID and file-number fields omitted; whitespace missing values mapped to blank numeric cells; nominal endpoint and unverified date-window flags retained. No model fitted."
+        },
+        {
+            "rank": 2,
+            "id": "cornorb",
+            "title": "CornOrb: Orbscan Corneal Topography and Clinical Annotations for Keratoconus Detection",
+            "repository_url": "https://zenodo.org/records/20542091",
+            "dataset_doi": "10.5281/zenodo.20542091",
+            "paper_url": "https://www.mdpi.com/2306-5729/11/9/227",
+            "access": "Current Zenodo API confirms open files; older version 17127265 is restricted",
+            "license": "Current Zenodo record/API says CC BY 4.0; September 2026 paper says CC BY-NC 4.0. Preserve discrepancy and clarify before commercial reuse.",
+            "patients": 744,
+            "eye_or_examination_records": 1454,
+            "normal_records": 889,
+            "keratoconus_records": 565,
+            "maps_per_record": 4,
+            "expected_map_count": 5816,
+            "image_count_verification": "Four maps per reported record; archive contents were not downloaded or counted",
+            "modalities": [
+                "PNG axial curvature",
+                "PNG anterior elevation",
+                "PNG posterior elevation",
+                "PNG pachymetry",
+                "CSV clinical variables and patient-level splits"
+            ],
+            "labels": [
+                "normal versus keratoconus",
+                "age",
+                "sex",
+                "Kmax",
+                "astigmatism",
+                "central/thinnest pachymetry",
+                "asphericity"
+            ],
+            "longitudinal": false,
+            "postoperative_cdva": false,
+            "treatment_cohorts": false,
+            "primary_study_exact_match": false,
+            "recommended_use": "Independent imaging/classification demonstration or future image-feature pipeline; cannot train the primary postoperative CDVA target",
+            "archive_bytes": 680169702,
+            "downloaded": false
+        },
+        {
+            "rank": 3,
+            "id": "aslan_2020",
+            "title": "The impact of hybrid contact lenses on keratoconus progression after accelerated transepithelial crosslinking",
+            "repository_url": "https://data.mendeley.com/datasets/t9jjjg8n92/2",
+            "dataset_doi": "10.17632/t9jjjg8n92.2",
+            "paper_url": "https://pubmed.ncbi.nlm.nih.gov/32856196/",
+            "access": "Open SPSS SAV; downloaded and checked",
+            "license": "CC BY 4.0",
+            "published_paper_patients": 60,
+            "published_paper_eyes": 80,
+            "verified_file_rows": 84,
+            "verified_file_columns": 35,
+            "verified_group_counts": {
+                "hybrid_lens": 38,
+                "control": 46
+            },
+            "verified_patient_identifier": false,
+            "images_in_downloaded_file": 0,
+            "modalities": [
+                "tabular CDVA",
+                "Scheimpflug-derived numeric measurements"
+            ],
+            "labels": [
+                "hybrid-lens versus control",
+                "Eye laterality",
+                "LOGVAPRE",
+                "LOGVAPOST",
+                "KMAXPRE/POST",
+                "THICKPRE/POST",
+                "FOLLOWUP"
+            ],
+            "longitudinal": "Public file contains PRE and generic POST, not separately identified 6M and 12M endpoints",
+            "verified_followup_months_range": [
+                6,
+                18
+            ],
+            "verified_followup_10_to_14_month_rows": 45,
+            "verified_followup_exactly_12_month_rows": 4,
+            "treatments": "Accelerated transepithelial CXL followed by optical correction; no TG-PRK cohort",
+            "limitations": [
+                "84 public-file rows differ from the paper's 80 eyes",
+                "No patient ID for grouping fellow eyes",
+                "Age range includes 17 years",
+                "POST endpoint timing/meaning needs clarification",
+                "AS-OCT is described in the study but no image files are released here"
+            ],
+            "primary_study_exact_match": false,
+            "recommended_use": "Candidate for a separate exploratory CXL/optical-correction demonstration only after the file-paper discrepancy and endpoint definitions are resolved",
+            "local_raw_path": "C:/Users/user/Desktop/Hackathon/Public_Datasets/Aslan_2020_A_TE_CXL_HCL_raw.sav",
+            "download_url": "https://data.mendeley.com/public-files/datasets/t9jjjg8n92/files/5b518b27-38c8-4955-9a45-47329da69afd/file_downloaded",
+            "raw_bytes": 22420,
+            "raw_sha256": "6984b287090c07fdc64d929b49d7fb8a6e02309816d0bcb8db70326a2f072595",
+            "sha256_matches_repository": true
+        },
+        {
+            "rank": 4,
+            "id": "cadmus",
+            "title": "INSIGHT Moorfields Cornea Anterior Segment Dataset (CADMUS)",
+            "repository_url": "https://www.insight.hdrhub.org/",
+            "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13235489/",
+            "paper_doi": "10.1016/j.xops.2026.101203",
+            "access": "Governed application via INSIGHT Data Use Application and Secure Research Environment; not an instant public download",
+            "license": "Data access agreement/governance terms; article's CC BY licence does not license patient data downloads",
+            "patients_all_diseases": 22482,
+            "image_acquisitions_all_diseases": 945243,
+            "keratoconus_diagnosis_records": 42194,
+            "cxl_procedure_records": 7115,
+            "modalities": [
+                "MS-39 Placido images",
+                "OCT",
+                "grayscale photographs",
+                "tomography indices",
+                "linked electronic clinical records"
+            ],
+            "labels": [
+                "diagnoses",
+                "procedure records",
+                "demographics",
+                "refraction",
+                "visual-acuity method",
+                "visit dates/follow-up"
+            ],
+            "longitudinal": true,
+            "primary_study_exact_match": false,
+            "exact_tg_prk_and_accelerated_cxl_12month_subset_verified": false,
+            "recommended_use": "Best long-term multimodal outcomes resource to investigate through an approved application; unsuitable for ASAP acquisition",
+            "downloaded": false
+        },
+        {
+            "rank": 5,
+            "id": "pentacam_indices",
+            "title": "KERATOCONUS WITH PENTACAM INDICES",
+            "repository_url": "https://data.mendeley.com/datasets/fcb47rngbd/2",
+            "dataset_doi_verified_download_version": "10.17632/fcb47rngbd.2",
+            "paper_dataset_doi": "10.17632/fcb47rngbd.3",
+            "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7331257/",
+            "access": "Version 2 public API lists a 79,792-byte XLSX; paper cites version 3, whose root file list was empty in this check",
+            "license": "CC BY 4.0",
+            "paper_patients": 205,
+            "paper_eyes": 205,
+            "paper_classes": {
+                "normal": 82,
+                "early_stage_keratoconus": 40,
+                "established_keratoconus": 83
+            },
+            "modalities": [
+                "tabular Pentacam topography",
+                "pachymetry",
+                "aberrometry",
+                "clinical measurements"
+            ],
+            "images_verified": false,
+            "longitudinal": false,
+            "treatments": "Cross-sectional diagnostic study excludes prior surgery/cross-linking",
+            "primary_study_exact_match": false,
+            "recommended_use": "Diagnostic tabular benchmark or data-schema testing; cannot supply postoperative CDVA outcomes",
+            "downloaded": false
+        },
+        {
+            "rank": 6,
+            "id": "casia_sample",
+            "title": "Dataset and Codes Supporting: Prediction of the ectasia screening index from raw Casia2 volume data",
+            "repository_url": "https://zenodo.org/records/16846551",
+            "dataset_doi": "10.5281/zenodo.16846551",
+            "paper_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0311036",
+            "access": "Open Zenodo supporting sample plus code; current file list verified via API",
+            "license": "CC BY 4.0",
+            "verified_released_volume_files": 7,
+            "verified_total_release_bytes_approx": 262400000,
+            "patient_count_in_public_release": null,
+            "paper_scan_count": 5817,
+            "paper_count_is_not_public_release_count": true,
+            "modalities": [
+                "raw .3dv anterior-segment OCT volumes",
+                "CSV data information",
+                "CNN source code"
+            ],
+            "labels": [
+                "ectasia screening index",
+                "keratoconus versus not-keratoconus"
+            ],
+            "longitudinal_treatment_outcomes": false,
+            "primary_study_exact_match": false,
+            "recommended_use": "Small OCT preprocessing/visualization sample, not a full training cohort for treatment-outcome prediction; consult the paper's 2025 and 2026 corrections",
+            "downloaded": false
+        }
+    ],
+    "file_verification_artifact": "C:/Users/user/Desktop/Hackathon/_keranova_build/public_data_file_audit.json",
+    "source_integrity": "Original files remain unmodified and separate from dataset.csv. Public outcome data are not evidence about the KKESH cohort. No external model or clinical efficacy result has been generated."
+}

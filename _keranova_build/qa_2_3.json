@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-10-01",
+  "scope": "Every latest PNG in qa/2 and qa/3 re-inspected with view_image at original detail after layout correction",
+  "renderer": "Internal Aspose evaluation previews; banners and watermarks are QA-only",
+  "overall_status": "pass",
+  "documents": {
+    "2": {
+      "pages_inspected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "pass",
+      "title": "Black title without border or decorative rule",
+      "table_margins": "Aligned with body text margins",
+      "content_readability": "pass",
+      "table_flow": "Continued tables repeat headers and preserve complete rows",
+      "clipping_or_overlap": "none beyond known QA watermark",
+      "unintended_blank_pages": "none"
+    },
+    "3": {
+      "pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "status": "pass",
+      "title": "Black title without border or decorative rule",
+      "table_margins": "Aligned with body text margins; narrow CSV number column allows readable headers and rules",
+      "exact_headers": "Visible and readable; long headers wrap without clipping",
+      "long_clean_fields_visually_confirmed": [
+        "structural_topography_header",
+        "thinnest_postop_unassigned_um",
+        "pad_d_postop_unassigned_source",
+        "amsler_krumeich_stage_source"
+      ],
+      "long_clean_field_note": "These four identifiers wrap onto a second line; all characters remain visible. Token-comparison misses reflect line wrapping, not missing text",
+      "clipping_or_overlap": "none beyond known QA watermark",
+      "unintended_blank_pages": "none; workbook reconciliation and provenance share final page",
+      "pagination_limitation": "Chapter previews verify layout geometry, not final global page numbering"
+    }
+  },
+  "resolved_issues": [
+    "Removed inherited blue title border",
+    "Constrained table and grid widths to body text area",
+    "Reduced mapping number-column width",
+    "Combined concluding workbook and provenance sections"
+  ],
+  "open_layout_issues": []
+}

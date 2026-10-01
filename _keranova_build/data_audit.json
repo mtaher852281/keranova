@@ -1,0 +1,599 @@
+{
+  "audit_date": "2026-10-01",
+  "csv": {
+    "source": "dataset.csv",
+    "sha256": "b51040e82be5b20c2b14d9f1931121c55f0c5215f0cd65eb8087596fb4aa441c",
+    "csv_data_rows_before_classification": 83,
+    "eye_record_rows": 79,
+    "column_count": 42,
+    "section_source_rows": [
+      2,
+      21,
+      40,
+      63
+    ],
+    "headers": [
+      {
+        "column": 1,
+        "exact_header": "     Demographics ",
+        "escaped_header": "\"     Demographics \"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 2,
+        "exact_header": "gender",
+        "escaped_header": "\"gender\"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 3,
+        "exact_header": "age",
+        "escaped_header": "\"age\"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 4,
+        "exact_header": "Eye (laterality) right OD/ left OS",
+        "escaped_header": "\"Eye (laterality) right OD/ left OS\"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 5,
+        "exact_header": "Visual Acuity ",
+        "escaped_header": "\"Visual Acuity \"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 6,
+        "exact_header": "Uncorrected (VA-Dt) pre-op ",
+        "escaped_header": "\"Uncorrected (VA-Dt) pre-op \"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 7,
+        "exact_header": "Un corrected VA-Dt post op 1 month",
+        "escaped_header": "\"Un corrected VA-Dt post op 1 month\"",
+        "nonmissing_eye_records": 65
+      },
+      {
+        "column": 8,
+        "exact_header": "Uncorrected VA-Dt post op 6 months ",
+        "escaped_header": "\"Uncorrected VA-Dt post op 6 months \"",
+        "nonmissing_eye_records": 62
+      },
+      {
+        "column": 9,
+        "exact_header": "Uncorrected VA-Dt post op 12 month",
+        "escaped_header": "\"Uncorrected VA-Dt post op 12 month\"",
+        "nonmissing_eye_records": 39
+      },
+      {
+        "column": 10,
+        "exact_header": "corrected (VA-Dt) pre-op ",
+        "escaped_header": "\"corrected (VA-Dt) pre-op \"",
+        "nonmissing_eye_records": 9
+      },
+      {
+        "column": 11,
+        "exact_header": "corrected VA-Dt post op 1 month",
+        "escaped_header": "\"corrected VA-Dt post op 1 month\"",
+        "nonmissing_eye_records": 6
+      },
+      {
+        "column": 12,
+        "exact_header": "corrected VA-Dt post op 6 months ",
+        "escaped_header": "\"corrected VA-Dt post op 6 months \"",
+        "nonmissing_eye_records": 5
+      },
+      {
+        "column": 13,
+        "exact_header": "corrected VA-Dt post op 12 month",
+        "escaped_header": "\"corrected VA-Dt post op 12 month\"",
+        "nonmissing_eye_records": 2
+      },
+      {
+        "column": 14,
+        "exact_header": "Refraction ",
+        "escaped_header": "\"Refraction \"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 15,
+        "exact_header": "pre-op_sphere diopters",
+        "escaped_header": "\"pre-op_sphere diopters\"",
+        "nonmissing_eye_records": 74
+      },
+      {
+        "column": 16,
+        "exact_header": "preop_cylinder Diopters",
+        "escaped_header": "\"preop_cylinder Diopters\"",
+        "nonmissing_eye_records": 73
+      },
+      {
+        "column": 17,
+        "exact_header": "pre-op_mrse Diopters",
+        "escaped_header": "\"pre-op_mrse Diopters\"",
+        "nonmissing_eye_records": 69
+      },
+      {
+        "column": 18,
+        "exact_header": "postop_sphere after 1 month ",
+        "escaped_header": "\"postop_sphere after 1 month \"",
+        "nonmissing_eye_records": 62
+      },
+      {
+        "column": 19,
+        "exact_header": "postop_cylinder after 1 month ",
+        "escaped_header": "\"postop_cylinder after 1 month \"",
+        "nonmissing_eye_records": 60
+      },
+      {
+        "column": 20,
+        "exact_header": "postop_mrse after 1 month ",
+        "escaped_header": "\"postop_mrse after 1 month \"",
+        "nonmissing_eye_records": 57
+      },
+      {
+        "column": 21,
+        "exact_header": "postop_sphere after 6 months ",
+        "escaped_header": "\"postop_sphere after 6 months \"",
+        "nonmissing_eye_records": 33
+      },
+      {
+        "column": 22,
+        "exact_header": "postop_cylinder after 6 months",
+        "escaped_header": "\"postop_cylinder after 6 months\"",
+        "nonmissing_eye_records": 31
+      },
+      {
+        "column": 23,
+        "exact_header": "postop_mrse after 6 months ",
+        "escaped_header": "\"postop_mrse after 6 months \"",
+        "nonmissing_eye_records": 28
+      },
+      {
+        "column": 24,
+        "exact_header": "postop_sphere after 12 months ",
+        "escaped_header": "\"postop_sphere after 12 months \"",
+        "nonmissing_eye_records": 18
+      },
+      {
+        "column": 25,
+        "exact_header": "postop_cylinder after 12 months",
+        "escaped_header": "\"postop_cylinder after 12 months\"",
+        "nonmissing_eye_records": 17
+      },
+      {
+        "column": 26,
+        "exact_header": "postop_mrse after 12 months ",
+        "escaped_header": "\"postop_mrse after 12 months \"",
+        "nonmissing_eye_records": 15
+      },
+      {
+        "column": 27,
+        "exact_header": "Topography ",
+        "escaped_header": "\"Topography \"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 28,
+        "exact_header": "preop_k1 diopters ",
+        "escaped_header": "\"preop_k1 diopters \"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 29,
+        "exact_header": "preop_k2 diopters ",
+        "escaped_header": "\"preop_k2 diopters \"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 30,
+        "exact_header": "preop_kmax diopters ",
+        "escaped_header": "\"preop_kmax diopters \"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 31,
+        "exact_header": "Preop-thinnest loca",
+        "escaped_header": "\"Preop-thinnest loca\"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 32,
+        "exact_header": "Preop-PAD-d",
+        "escaped_header": "\"Preop-PAD-d\"",
+        "nonmissing_eye_records": 9
+      },
+      {
+        "column": 33,
+        "exact_header": "postop_k1",
+        "escaped_header": "\"postop_k1\"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 34,
+        "exact_header": "postop_k2",
+        "escaped_header": "\"postop_k2\"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 35,
+        "exact_header": "postop_kmax",
+        "escaped_header": "\"postop_kmax\"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 36,
+        "exact_header": "Post op-thinnest loca",
+        "escaped_header": "\"Post op-thinnest loca\"",
+        "nonmissing_eye_records": 78
+      },
+      {
+        "column": 37,
+        "exact_header": "Post op - Pad d ",
+        "escaped_header": "\"Post op - Pad d \"",
+        "nonmissing_eye_records": 7
+      },
+      {
+        "column": 38,
+        "exact_header": "treatment_details",
+        "escaped_header": "\"treatment_details\"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 39,
+        "exact_header": "treatment_details PreOp (TG-PRK+ACXL) vs (ACXL alone)",
+        "escaped_header": "\"treatment_details PreOp (TG-PRK+ACXL) vs (ACXL alone)\"",
+        "nonmissing_eye_records": 79
+      },
+      {
+        "column": 40,
+        "exact_header": "Amsler-Krumeich Classification ",
+        "escaped_header": "\"Amsler-Krumeich Classification \"",
+        "nonmissing_eye_records": 61
+      },
+      {
+        "column": 41,
+        "exact_header": "Safety/Haze",
+        "escaped_header": "\"Safety/Haze\"",
+        "nonmissing_eye_records": 0
+      },
+      {
+        "column": 42,
+        "exact_header": "Haze_Present post op ( yes/No) ",
+        "escaped_header": "\"Haze_Present post op ( yes/No) \"",
+        "nonmissing_eye_records": 78
+      }
+    ],
+    "treatment_counts_raw": {
+      "CXL only": 44,
+      "PRK with CXL": 27,
+      "CXL with PTK": 1,
+      "CXL": 7
+    },
+    "sex_counts_raw": {
+      "Male": 46,
+      "Female": 10,
+      "Femal": 8,
+      "Femal ": 1,
+      "Male ": 6,
+      "Female ": 8
+    },
+    "age_under18": [
+      {
+        "source_row": 20,
+        "raw": "17 y"
+      },
+      {
+        "source_row": 72,
+        "raw": "16y"
+      }
+    ],
+    "corrected_va_entries": {
+      "corrected (VA-Dt) pre-op ": [
+        {
+          "source_row": 6,
+          "raw": "20/40"
+        },
+        {
+          "source_row": 9,
+          "raw": "20/25"
+        },
+        {
+          "source_row": 14,
+          "raw": "20/25"
+        },
+        {
+          "source_row": 19,
+          "raw": "20/20"
+        },
+        {
+          "source_row": 58,
+          "raw": "20/20"
+        },
+        {
+          "source_row": 64,
+          "raw": "20/30"
+        },
+        {
+          "source_row": 68,
+          "raw": "20/30-2"
+        },
+        {
+          "source_row": 71,
+          "raw": "20/60"
+        },
+        {
+          "source_row": 76,
+          "raw": "20/20"
+        }
+      ],
+      "corrected VA-Dt post op 1 month": [
+        {
+          "source_row": 6,
+          "raw": "20/40"
+        },
+        {
+          "source_row": 58,
+          "raw": "20/20"
+        },
+        {
+          "source_row": 64,
+          "raw": "20/20"
+        },
+        {
+          "source_row": 68,
+          "raw": "20/50"
+        },
+        {
+          "source_row": 71,
+          "raw": "20/25"
+        },
+        {
+          "source_row": 76,
+          "raw": "20/20-"
+        }
+      ],
+      "corrected VA-Dt post op 6 months ": [
+        {
+          "source_row": 6,
+          "raw": "20/25-2"
+        },
+        {
+          "source_row": 58,
+          "raw": "20/20"
+        },
+        {
+          "source_row": 64,
+          "raw": "20/25+1"
+        },
+        {
+          "source_row": 68,
+          "raw": "20/40"
+        },
+        {
+          "source_row": 76,
+          "raw": "20/20-"
+        }
+      ],
+      "corrected VA-Dt post op 12 month": [
+        {
+          "source_row": 6,
+          "raw": "20/30-"
+        },
+        {
+          "source_row": 76,
+          "raw": "20/25"
+        }
+      ]
+    },
+    "baseline_and_12mo_cdva_populated_rows": [
+      6,
+      76
+    ],
+    "primary_candidate_fields_complete_raw_rows": [
+      6,
+      76
+    ],
+    "mrse_inconsistency_review_candidates": [
+      {
+        "source_row": 23,
+        "interval": "baseline",
+        "sphere_raw": "1.00",
+        "cylinder_raw": "-5.00",
+        "mrse_raw": "1.50",
+        "mrse_calculated": -1.5,
+        "difference": 3.0
+      },
+      {
+        "source_row": 57,
+        "interval": "1_month_label",
+        "sphere_raw": "-3.50",
+        "cylinder_raw": "-2.25",
+        "mrse_raw": "-4.652",
+        "mrse_calculated": -4.625,
+        "difference": -0.027000000000000135
+      }
+    ],
+    "haze_counts_raw": {
+      "No": 13,
+      "Mild haze": 10,
+      "Mild nasal haze": 1,
+      "Haze centrally": 1,
+      "-": 1,
+      "Central corneal haze": 1,
+      "Haze peripherally": 1,
+      "No haze": 35,
+      "mild old haze": 1,
+      "Haze ++": 2,
+      "Mild central haze": 1,
+      "Haze margin": 1,
+      "Faint central haze": 1,
+      "Central haze": 2,
+      "Central mild haze": 1,
+      "Minimal haze +1": 2,
+      "Mild haze nasally": 1,
+      "Haze +1": 2,
+      "Minimal haze": 1,
+      "Haze +2": 1
+    },
+    "exact_duplicate_source_row_pairs": [],
+    "limitations": [
+      "Eye records are source rows and do not establish unique patients or eligible eyes.",
+      "Source labels do not verify topography guided PRK or accelerated CXL.",
+      "No patient codes, index treatment dates, visit dates, imaging references or confirmed scan quality.",
+      "Postoperative topography fields have no named interval and must not be mapped to 12 months.",
+      "Nonmissing counts include qualified visual acuities and other values requiring source review.",
+      "Age timing is unspecified; entries under 18 require verification of age at index treatment."
+    ]
+  },
+  "workbook": {
+    "source": "others\\25240-R Database.xlsx",
+    "sheets": [
+      {
+        "sheet": "25240-R",
+        "max_row": 70,
+        "max_column": 101,
+        "nonempty_row_count": 1,
+        "first_rows": [
+          [
+            1,
+            [
+              "     Demographics ",
+              "mrn",
+              "gender",
+              "age",
+              "Eye (laterality) right OD/ left OS",
+              "date_of_sx D/M/Y",
+              "Visual Acuity ",
+              "pre-op_udva (logMAR)",
+              "pre-op cdva(logMAR)",
+              "post-op_udva (logMAR)",
+              "post-op_cdva diopters",
+              "Refraction ",
+              "pre-op_sphere diopters",
+              "preop_cylinder Diopters",
+              "pre-op_mrse Diopters",
+              "postop_sphere diopters",
+              "postop_cylinder diopters ",
+              "postop_mrse diopters ",
+              "Topography ",
+              "pre op_arc (mm)",
+              "preop_prc (mm)",
+              "preop_k1 diopters ",
+              "preop_k2 diopters ",
+              "preop_kmax diopters ",
+              "preop_bad_d",
+              "preop_isv",
+              "pre_op_iva",
+              "preop_ki",
+              "preop_cki",
+              "preop_iha",
+              "preop_ihd",
+              "postop_arc",
+              "postop_prc",
+              "postop_k1",
+              "postop_k2",
+              "postop_kmax",
+              "postop_bad_d",
+              "postop_isv",
+              "postop_iva",
+              "postop_ki",
+              "postop_cki",
+              "postop_iha",
+              "postop_ihd",
+              "Pachymetry",
+              "preop_cct µm",
+              "preop_at µm",
+              "preop_tct µm",
+              "postop_cct µm",
+              "postop_at µm",
+              "postop_tct µm",
+              "aberrometry",
+              "aberrometry_rms",
+              "aberrometry_loas",
+              "aberrometry_hoas",
+              "aberrometry_coma_0",
+              "aberrometry_coma_90",
+              "aberrometry_trefoil_0",
+              "aberrometry_trefoil_30",
+              "aberrometry_sa",
+              "aberrometry_preop_rms",
+              "aberrometry_preop_loas",
+              "aberrometry_preop_hoas",
+              "aberrometry_preop_coma_0",
+              "aberrometry_preop_coma_90",
+              "aberrometry_preop_trefoil_0",
+              "aberrometry_preop_trefoil_30",
+              "aberrometry_preop_sa",
+              "aberrometry_postop_rms",
+              "aberrometry_postop_loas",
+              "aberrometry_postop_hoas",
+              "aberrometry_postop_coma_0",
+              "aberrometry_postop_coma_90",
+              "aberrometry_postop_trefoil_0",
+              "aberrometry_postop_trefoil_30",
+              "aberrometry_postop_sa",
+              "densitometry",
+              "densitometry_preop_0_2_mm",
+              "densitometry_preop_2_6_mm",
+              "densitometry_postop_0_2_mm",
+              "densitometry_postop_2_6_mm",
+              "vector_analysis",
+              "vector_analysis_tia_PreOp ",
+              "vector_analysis_sia_PreOp",
+              "vector_analysis_ae_PreOp",
+              "vector_analysis_dv_PreOp",
+              "vector_analysis_ci_PreOp",
+              "treatment_details",
+              "treatment_details PreOp (TG-PRK+ACXL) vs (ACXL alone)",
+              "severity_subgroup_PreOp (Severe vs mild to moderate )",
+              "Safety/Haze",
+              "Haze_Present ( yes/No) ",
+              "safety_haze_time_to_resolution_months ",
+              "vector_analysis_tia_postop",
+              "vector_analysis_sia_postop",
+              "vector_analysis_ae_postop",
+              "vector_analysis_dv_postop",
+              "vector_analysis_ci_postop",
+              "treatment_details_postop",
+              "severity_subgroup_postop",
+              "Haze_Present_postop",
+              "safety_haze_time_to_resolution_m_postop"
+            ]
+          ]
+        ]
+      },
+      {
+        "sheet": "Codebook",
+        "max_row": 83,
+        "max_column": 2,
+        "nonempty_row_count": 82,
+        "first_rows": [
+          [
+            2,
+            [
+              "mrn",
+              "text"
+            ]
+          ],
+          [
+            3,
+            [
+              "gender",
+              "1, Male 2, Female "
+            ]
+          ],
+          [
+            4,
+            [
+              "age",
+              "Number "
+            ]
+          ]
+        ]
+      }
+    ]
+  }
+}

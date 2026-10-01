@@ -1,0 +1,36 @@
+{
+  "means": [
+    0.27928171776316285,
+    26.388535031847134,
+    0.0,
+    54.06464968152867,
+    444.52866242038215
+  ],
+  "scales": [
+    0.19264828332471745,
+    6.8413781171461645,
+    1.0,
+    5.883772786411601,
+    45.416762318386
+  ],
+  "coefficients": [
+    0.25121818275164204,
+    0.08457084987938195,
+    0.010893014793426895,
+    -0.009542869000289113,
+    0.04790142610407657,
+    -0.022962854624582127
+  ],
+  "lambda": 0.0001,
+  "feature_order": [
+    "baseline_cdva_logmar",
+    "age_years",
+    "sex_source_code",
+    "baseline_kmax_d",
+    "pachymetry_um"
+  ],
+  "target": "nominal_1year_cdva_logmar",
+  "sex_coding": "male=1,female=0",
+  "scope": "Public CXL-only nominal-one-year feasibility; no clinical treatment recommendation",
+  "prediction_formula": "[1, (x-means)/scales] dot coefficients"
+}

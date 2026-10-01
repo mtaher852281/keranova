@@ -1,0 +1,201 @@
+[
+  {
+    "file": "1. Methodology.docx",
+    "pages": 5,
+    "text_coverage": 1.0,
+    "minor_token_differences": {},
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\1",
+    "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+  },
+  {
+    "file": "2. Data_Collection_Sheet.docx",
+    "pages": 4,
+    "text_coverage": 1.0,
+    "minor_token_differences": {},
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\2",
+    "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+  },
+  {
+    "file": "3. Data_Variable_Mapping_Sheet.docx",
+    "pages": 7,
+    "chapters": [
+      {
+        "file": "chapter-1.docx",
+        "pages": 1,
+        "text_coverage": 0.9966329966329966,
+        "minor_token_differences": {
+          "structural_topography_header": 1
+        },
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-2.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-3.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-4.docx",
+        "pages": 1,
+        "text_coverage": 0.9882352941176471,
+        "minor_token_differences": {
+          "thinnest_postop_unassigned_um": 1,
+          "pad_d_postop_unassigned_source": 1
+        },
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-5.docx",
+        "pages": 1,
+        "text_coverage": 0.9915254237288136,
+        "minor_token_differences": {
+          "amsler_krumeich_stage_source": 1
+        },
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-6.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-7.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      }
+    ],
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\3",
+    "mode": "Explicit page-break chapters rendered separately; native Word pagination not independently checked"
+  },
+  {
+    "file": "4. Data_Cleaning_Rules.docx",
+    "pages": 4,
+    "text_coverage": 1.0,
+    "minor_token_differences": {},
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\4",
+    "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+  },
+  {
+    "file": "5. Data_Transformation_Template.docx",
+    "pages": 4,
+    "text_coverage": 1.0,
+    "minor_token_differences": {},
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\5",
+    "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+  },
+  {
+    "file": "6. Statistical_Plan.docx",
+    "pages": 5,
+    "text_coverage": 1.0,
+    "minor_token_differences": {},
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\6",
+    "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+  },
+  {
+    "file": "7. Dummy_Tables_and_Figures.docx",
+    "pages": 10,
+    "chapters": [
+      {
+        "file": "chapter-1.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-2.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-3.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-4.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-5.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-6.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-7.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-8.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-9.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      },
+      {
+        "file": "chapter-10.docx",
+        "pages": 1,
+        "text_coverage": 1.0,
+        "minor_token_differences": {},
+        "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+        "renderer": "Aspose evaluation QA only; final DOCX unchanged"
+      }
+    ],
+    "qa_directory": "C:\\Users\\user\\Desktop\\Hackathon\\_keranova_build\\qa\\7",
+    "mode": "Explicit page-break chapters rendered separately; native Word pagination not independently checked"
+  }
+]

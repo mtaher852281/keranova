@@ -1,0 +1,103 @@
+{
+  "experiment": "Fast public CXL-only nominal-one-year vision prediction",
+  "date": "2026-10-01",
+  "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263528",
+  "source_sha256": "bedb65d905a73a81a5b4ecc724fa2665132e590aa795ff24a184779a677099aa",
+  "features": [
+    "baseline_cdva_logmar",
+    "age_years",
+    "sex_source_code",
+    "baseline_kmax_d",
+    "pachymetry_um"
+  ],
+  "screening": {
+    "source_rows": 613,
+    "source_patients": 456,
+    "screening_counts": {
+      "included": 314,
+      "missing nominal one-year outcome": 200,
+      "negative source last-followup metadata": 79,
+      "missing baseline predictor": 17,
+      "source patient has more than two records": 3
+    },
+    "analysis_records": 314,
+    "analysis_patients": 235,
+    "cxl_protocol_counts": {
+      "1": 204,
+      "0": 110
+    },
+    "baseline_correction_labels": {
+      "Spectacles": 167,
+      "RGP": 45,
+      "No correction": 36,
+      "Soft CL": 22,
+      " ": 11,
+      "Scleral CL": 11,
+      "Piggy back": 8,
+      "Hybrid CL": 7,
+      "Miniscleral": 6,
+      "Sft K": 1
+    }
+  },
+  "validation": "20 repeats: 5 outer and 4 inner patient-grouped folds",
+  "random_seed": 20261001,
+  "metrics": {
+    "ridge": {
+      "mae_logmar": 0.09042803851727793,
+      "rmse_logmar": 0.1300041300538703,
+      "r_squared": 0.5007143037498781,
+      "mean_prediction_error_logmar": 0.00017813282266886666,
+      "calibration_intercept": 0.0038512099175389987,
+      "calibration_slope": 0.9836112304233676,
+      "fraction_within_0_10_logmar": 0.6931528662420381,
+      "fraction_within_0_20_logmar": 0.9081210191082804
+    },
+    "baseline_cdva_only": {
+      "mae_logmar": 0.09772135374953692,
+      "rmse_logmar": 0.13886053020276998,
+      "r_squared": 0.4303839837635269,
+      "mean_prediction_error_logmar": 0.0002807067491975905,
+      "calibration_intercept": 0.0062304369818099465,
+      "calibration_slope": 0.9735010948754335,
+      "fraction_within_0_10_logmar": 0.6531847133757961,
+      "fraction_within_0_20_logmar": 0.8824840764331212
+    },
+    "training_mean": {
+      "mae_logmar": 0.1398939851238743,
+      "rmse_logmar": 0.18480014353960417,
+      "r_squared": -0.008790087194649587,
+      "mean_prediction_error_logmar": 2.1703349828233695e-05,
+      "calibration_intercept": 1.2178350409325258,
+      "calibration_slope": -3.9651183466133446,
+      "fraction_within_0_10_logmar": 0.5025477707006369,
+      "fraction_within_0_20_logmar": 0.795859872611465
+    },
+    "repeat_mae_ranges": {
+      "ridge": [
+        0.08888217049810851,
+        0.09179881009095878
+      ],
+      "baseline_cdva_only": [
+        0.0968637161102393,
+        0.09938295805954128
+      ],
+      "training_mean": [
+        0.13926989919610958,
+        0.14115704658257103
+      ]
+    }
+  },
+  "bootstrap_confidence_intervals": "Not run in this fast experiment",
+  "limitations": [
+    "Nominal one-year label; actual visit dates and laterality absent",
+    "Source correction methods heterogeneous; not harmonized to verified spectacle CDVA",
+    "Public CXL-only sample has no TG-PRK cohort; institutional model remains untrained",
+    "Repeated internal validation is not external validation or clinical approval"
+  ],
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "elapsed_seconds": 0.6552200999576598
+}

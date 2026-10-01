@@ -1,0 +1,181 @@
+{
+  "checked_date": "2026-10-01",
+  "review_method": "Every PNG inspected individually through view_image with original detail",
+  "scope": "Visual QA of documents 4 and 5 only; no DOCX edits",
+  "total_pages_reviewed": 8,
+  "evaluation_artifacts": "Aspose evaluation banners and central watermark appear in internal QA images. They were excluded from final-document layout findings as instructed. Final DOCX watermark state was not independently inspected in this visual-only task.",
+  "documents": [
+    {
+      "document": "4. Data_Cleaning_Rules.docx",
+      "pages_reviewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/4/page-1.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "previous_round_issues": [
+            "Import identity and dates table has only its header at page bottom; all data start on page 2",
+            "Tables extend nearly edge-to-edge instead of matching body text margins",
+            "Blue horizontal rule below the title"
+          ],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 2,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/4/page-2.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Repeated table header present",
+            "Complete visible rows and readable wrapping"
+          ],
+          "previous_round_issues": [
+            "Tables extend nearly edge-to-edge; Rule column occupies excessive width for R01-style labels"
+          ],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 3,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/4/page-3.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Repeated header on continued numeric-rules table",
+            "Range-review introduction stays with its table",
+            "No missing glyphs"
+          ],
+          "previous_round_issues": [
+            "Table widths extend beyond body text margins"
+          ],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 4,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/4/page-4.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Repeated range-table header present",
+            "Specific review findings, release criteria and reference are readable",
+            "Page number visible"
+          ],
+          "previous_round_issues": [
+            "Tables extend beyond body text margins"
+          ],
+          "latest_render_reviewed": true
+        }
+      ],
+      "recommendation": "No layout correction required",
+      "status": "Final visual QA passed"
+    },
+    {
+      "document": "5. Data_Transformation_Template.docx",
+      "pages_reviewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "page_reviews": [
+        {
+          "page": 1,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/5/page-1.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Endpoint algorithm readable",
+            "No truncated table rows or bullet text"
+          ],
+          "previous_round_issues": [
+            "Interval-selection table extends nearly edge-to-edge beyond body text margins",
+            "Blue horizontal rule below the title"
+          ],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 2,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/5/page-2.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Definitions and denominator paragraphs readable"
+          ],
+          "previous_round_issues": [
+            "Derived-variable table extends beyond body margins",
+            "Observed source availability table shows only its header at page bottom; all data start on page 3"
+          ],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 3,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/5/page-3.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Repeated availability-table header present",
+            "Availability table fits body margins",
+            "All source counts and readiness limitations readable",
+            "Model-preparation and safety paragraphs complete"
+          ],
+          "previous_round_issues": [],
+          "latest_render_reviewed": true
+        },
+        {
+          "page": 4,
+          "path": "C:/Users/user/Desktop/Hackathon/_keranova_build/qa/5/page-4.png",
+          "legible": true,
+          "clipping": false,
+          "overlap_excluding_renderer_watermark": false,
+          "issues": [],
+          "positive_checks": [
+            "Checklist bullets and sign-off fields visible",
+            "Page number visible"
+          ],
+          "previous_round_issues": [
+            "Last page contains only the short release checklist, leaving a large blank area; consolidate if possible after fixing page 2 break"
+          ],
+          "latest_render_reviewed": true
+        }
+      ],
+      "recommendation": "No layout correction required",
+      "status": "Final visual QA passed"
+    }
+  ],
+  "license_clarification_for_public_data_memo": {
+    "dataset": "CornOrb",
+    "repository": "https://zenodo.org/records/20542091",
+    "repository_api": "https://zenodo.org/api/records/20542091",
+    "repository_license_checked": "CC BY 4.0",
+    "paper": "https://www.mdpi.com/2306-5729/11/9/227",
+    "paper_license_statement": "CC BY-NC 4.0",
+    "status": "Source discrepancy unresolved; state both source claims and clarify before commercial reuse. Do not silently assign one licence."
+  },
+  "review_round": 2,
+  "final_visual_status": "passed",
+  "resolved_issues": [
+    "Title horizontal rules removed",
+    "Table widths now match body margins",
+    "Previously isolated table headers now stay with data rows"
+  ],
+  "nonblocking_observation": "Document 5 retains a separate short verification and sign-off page. Its checklist is readable and its blank space is acceptable for release signatures."
+}

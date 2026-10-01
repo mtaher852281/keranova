@@ -1,0 +1,51 @@
+[
+  {
+    "file": "1. Methodology.docx",
+    "characters": 14377,
+    "tables": 3,
+    "paragraphs": 42,
+    "sha256": "ce03897e2bbd28f3aef134691f4136955af5447a575098d6e117990991d3f8d0"
+  },
+  {
+    "file": "2. Data_Collection_Sheet.docx",
+    "characters": 8802,
+    "tables": 5,
+    "paragraphs": 28,
+    "sha256": "bf556d0ca32f55e3229aadd45c3191f814050ca940835f407fff1db1d42f1a12"
+  },
+  {
+    "file": "3. Data_Variable_Mapping_Sheet.docx",
+    "characters": 10242,
+    "tables": 6,
+    "paragraphs": 33,
+    "sha256": "72c87f0a6ccf372028e6062c272f88b865dc1f3373ba07a0a8ebc2dd3bf9fb51"
+  },
+  {
+    "file": "4. Data_Cleaning_Rules.docx",
+    "characters": 9908,
+    "tables": 5,
+    "paragraphs": 25,
+    "sha256": "e4c28a0c2c4257fd9206cbde369b48651244fdf1071cda731559ff89fccf06c8"
+  },
+  {
+    "file": "5. Data_Transformation_Template.docx",
+    "characters": 10257,
+    "tables": 3,
+    "paragraphs": 39,
+    "sha256": "3602bf4fd1f9635535b0883657f6aa6dcbf88abc14f3e0d72b57e241e7aaf06d"
+  },
+  {
+    "file": "6. Statistical_Plan.docx",
+    "characters": 15822,
+    "tables": 3,
+    "paragraphs": 50,
+    "sha256": "c4d62491a7e0cf317f5c6877f972493266fcb4099884d11bcb1ff289cf03cd6b"
+  },
+  {
+    "file": "7. Dummy_Tables_and_Figures.docx",
+    "characters": 12471,
+    "tables": 8,
+    "paragraphs": 51,
+    "sha256": "9fadfe1fadbbe56aab927b75d24c6cd103f4d9f23edc31315287c16471a665cd"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "reviewed_at": "2026-10-01",
+  "review_method": "Every latest PNG re-viewed with view_image at original detail after layout repairs: document 6 pages 1–5 and document 7 pages 1–10, 15 pages total. QA-only Aspose evaluation banners and chapter-local page-number resets were excluded from final-artifact findings.",
+  "final_documents_edited": false,
+  "documents": {
+    "6. Statistical_Plan": {
+      "pages_reviewed": 5,
+      "visual_status": "pass",
+      "content_status": "pass",
+      "pages": [
+        {"page": 1, "status": "pass", "notes": "Title, subtitle, numbered headings, population definitions, endpoint table and readiness paragraphs readable. Section 3 paragraph continues normally to page 2; no clipping or broken rows."},
+        {"page": 2, "status": "pass", "notes": "Missingness/model specification and numbered validation heading readable; all model rows intact."},
+        {"page": 3, "status": "pass", "notes": "Validation continuation, performance explanations and measure table readable; table ends within page and rows remain intact."},
+        {"page": 4, "status": "pass", "notes": "Secondary comparisons, sensitivity analyses and public feasibility definitions readable. Numbered headings now agree with section 3 and sections 4–6 references; public feasibility text fits in full."},
+        {"page": 5, "status": "pass", "notes": "Numbered reproducibility/references sections and all five references present; no blank final page or clipped URLs."}
+      ],
+      "issues": [],
+      "resolved_issues": [
+        {
+          "id": "S6-C1",
+          "status": "resolved",
+          "resolution": "Numbered headings restored and visually confirmed in latest render.",
+          "severity": "minor",
+          "pages": [4],
+          "finding": "The renderer removed heading section numbers, but prose still refers to section 3 and sections 4–6.",
+          "recommended_repair": "Restore numbered headings or replace these references with the corresponding named headings."
+        }
+      ]
+    },
+    "7. Dummy_Tables_and_Figures": {
+      "pages_reviewed": 10,
+      "visual_status": "pass",
+      "content_status": "pass",
+      "pages": [
+        {"page": 1, "status": "pass", "notes": "Title, introduction, use instructions and abbreviations readable; purposeful introductory page with Table 1 beginning separately."},
+        {"page": 2, "status": "pass", "notes": "Table 1 fits in full on its own page, including Model executed row; no orphaned continuation row."},
+        {"page": 3, "status": "pass", "notes": "Table 2 baseline characteristics fits cleanly with intact rows and footnote text."},
+        {"page": 4, "status": "pass", "notes": "Table 3 primary endpoint/vision shell readable; no clipping or broken rows."},
+        {"page": 5, "status": "pass", "notes": "Table 4 refraction/corneal measures readable; available-case and paired-change labels visible."},
+        {"page": 6, "status": "pass", "notes": "Table 5 documented complications and unknown assessment column readable."},
+        {"page": 7, "status": "pass", "notes": "Table 6 performance shell and full resampling footnote readable; no fabricated metrics."},
+        {"page": 8, "status": "pass", "notes": "Table 7 coefficients, coding and missingness labels readable; all rows fit."},
+        {"page": 9, "status": "pass", "notes": "Figure-specification table now aligns with normal content margins; all seven rows readable and intact."},
+        {"page": 10, "status": "pass", "notes": "Public-feasibility paragraph, numbered verification heading, reference URLs and full checklist share one substantive final page; no near-empty supplementary page or blank final page."}
+      ],
+      "issues": [],
+      "resolved_issues": [
+        {
+          "id": "S7-L1",
+          "status": "resolved",
+          "resolution": "Table 1 starts on its own page and fits completely; latest pages 1–2 visually confirmed.",
+          "severity": "moderate",
+          "pages": [1, 2],
+          "finding": "Table 1 has an orphaned final row on an otherwise near-empty continuation page.",
+          "recommended_repair": "Insert a page break before Table 1, separating the introduction from its table. The entire table should then fit on its own page and still use two pages total."
+        },
+        {
+          "id": "S7-L2",
+          "status": "resolved",
+          "resolution": "Figure-specification table constrained to content width and visually confirmed on latest page 9.",
+          "severity": "moderate",
+          "pages": [9],
+          "finding": "The three-column figure-specification table is wider than the normal text area and extends into both margins.",
+          "recommended_repair": "Constrain the table width to the available content width; suggested column proportions are 20%, 40%, 40%."
+        },
+        {
+          "id": "S7-L3",
+          "status": "resolved",
+          "resolution": "Supplementary paragraph and verification/references combined on latest page 10, reducing document to ten pages.",
+          "severity": "minor",
+          "pages": [10, 11],
+          "finding": "A short supplementary paragraph has a nearly empty dedicated page.",
+          "recommended_repair": "Allow the verification/references section to follow the supplementary paragraph on the same page. This is an optional compaction improvement."
+        }
+      ]
+    }
+  },
+  "bundle_consistency": [
+    "Primary target remains verified one-year CDVA logMAR; current CSV is explicitly not model ready.",
+    "Treatment comparison is observational; no causal superiority claim is present.",
+    "Main model uses six baseline predictors and complete cases; sensitivity preprocessing is training-only.",
+    "Public CXL-only nominal one-year feasibility remains separate from the KKESH cohort and is not called external validation.",
+    "Outcome/metric placeholders and not-run labels are visible; no fabricated analysis results were observed."
+  ]
+}

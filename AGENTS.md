@@ -1,8 +1,8 @@
 # Project context
 
-Read README.md for the KeraNova research objective, completed protocol package, public dataset limits and remaining work. No model has been trained and no clinical results should be invented. Keep the institutional protocol separate from a public CXL feasibility experiment. Preserve patient grouping and training-fold-only preprocessing.
+Read README.md for the KeraNova research objective, completed protocol package, public dataset limits and remaining work. The institutional model remains untrained; KeraNova_Fast_Model contains a separate exploratory public CXL experiment. No clinical results should be invented. Keep the institutional protocol separate from the public experiment. Preserve patient grouping and training-fold-only preprocessing.
 
-The public repository is deliberately limited by the root .gitignore allowlist. Do not publish institutional records, private source folders, contacts, credentials or local backups. Keep protocol_sources, the two published DOCX locations and the committee ZIP synchronized after reviewed revisions.
+The owner explicitly requested publication of the entire existing project folder, including dataset.csv, original documents and backups. The earlier publication allowlist was removed. Git internals, the rebuildable graph cache and credential-file patterns remain excluded. Never add credentials or newly obtained identifiable clinical records. Keep protocol_sources, the two published DOCX locations and the committee ZIP synchronized after reviewed revisions; the current committee snapshot predates the exploratory model outputs.
 
 # Global Codex Instructions
 
