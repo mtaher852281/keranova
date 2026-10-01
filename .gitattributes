@@ -1,0 +1,12 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+# Preserve the verified dataset checksum and its identical ZIP member.
+KeraNova_Submission/Public_Data/Wajnsztajn_2022_CXL_research_derivative.csv -text
+*.docx binary
+*.zip binary

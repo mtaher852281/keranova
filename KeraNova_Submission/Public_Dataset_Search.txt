@@ -1,0 +1,61 @@
+KeraNova Public Dataset Search
+Checked 1 October 2026
+
+No exact public replacement for the planned TG-PRK plus accelerated CXL versus accelerated CXL cohort with dated twelve-month CDVA and linked images was verified.
+
+Preferred outcome source: Wajnsztajn et al. supporting data. A separate CXL-only nominal-one-year feasibility experiment may be possible after source checks. The downloaded data has 334 baseline/nominal-one-year pairs across 251 source patient IDs before adult, completeness and quality screening.
+
+Preferred image source: CornOrb, with 1,454 examinations from 744 patients and four corneal maps per examination. It is a diagnostic dataset without postoperative CDVA. Its 680 MB archive was not downloaded. Repository and paper licence wording differ; clarify before commercial reuse.
+
+1. Predicting factors for the efficacy of cross-linking for keratoconus: S1 Data
+Source: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263528
+Access: Open publisher supplementary XLSX; downloaded and schema checked
+Licence: Article and supporting publication carry the Creative Commons Attribution licence; verify the publisher's current licence terms when redistributing.
+Suggested use: Separate external CXL-only nominal-one-year prediction feasibility cohort after source checks
+Limitation: Visit dates and laterality absent; the 10-14-month window cannot be verified
+Limitation: One source patient identifier has three rows
+Limitation: 79 numeric last-follow-up durations are negative and require source review
+Limitation: Whitespace strings encode missing values
+Limitation: Correction-method labels need review before harmonizing spectacle CDVA
+Limitation: No linked images
+Limitation: Paper's 385 last-follow-up LogMAR analyses differ from nominal 1Y availability
+
+2. CornOrb: Orbscan Corneal Topography and Clinical Annotations for Keratoconus Detection
+Source: https://zenodo.org/records/20542091
+Access: Current Zenodo API confirms open files; older version 17127265 is restricted
+Licence: Current Zenodo record/API says CC BY 4.0; September 2026 paper says CC BY-NC 4.0. Preserve discrepancy and clarify before commercial reuse.
+Suggested use: Independent imaging/classification demonstration or future image-feature pipeline; cannot train the primary postoperative CDVA target
+
+3. The impact of hybrid contact lenses on keratoconus progression after accelerated transepithelial crosslinking
+Source: https://data.mendeley.com/datasets/t9jjjg8n92/2
+Access: Open SPSS SAV; downloaded and checked
+Licence: CC BY 4.0
+Suggested use: Candidate for a separate exploratory CXL/optical-correction demonstration only after the file-paper discrepancy and endpoint definitions are resolved
+Limitation: 84 public-file rows differ from the paper's 80 eyes
+Limitation: No patient ID for grouping fellow eyes
+Limitation: Age range includes 17 years
+Limitation: POST endpoint timing/meaning needs clarification
+Limitation: AS-OCT is described in the study but no image files are released here
+
+4. INSIGHT Moorfields Cornea Anterior Segment Dataset (CADMUS)
+Source: https://www.insight.hdrhub.org/
+Access: Governed application via INSIGHT Data Use Application and Secure Research Environment; not an instant public download
+Licence: Data access agreement/governance terms; article's CC BY licence does not license patient data downloads
+Suggested use: Best long-term multimodal outcomes resource to investigate through an approved application; unsuitable for ASAP acquisition
+
+5. KERATOCONUS WITH PENTACAM INDICES
+Source: https://data.mendeley.com/datasets/fcb47rngbd/2
+Access: Version 2 public API lists a 79,792-byte XLSX; paper cites version 3, whose root file list was empty in this check
+Licence: CC BY 4.0
+Suggested use: Diagnostic tabular benchmark or data-schema testing; cannot supply postoperative CDVA outcomes
+
+6. Dataset and Codes Supporting: Prediction of the ectasia screening index from raw Casia2 volume data
+Source: https://zenodo.org/records/16846551
+Access: Open Zenodo supporting sample plus code; current file list verified via API
+Licence: CC BY 4.0
+Suggested use: Small OCT preprocessing/visualization sample, not a full training cohort for treatment-outcome prediction; consult the paper's 2025 and 2026 corrections
+
+Files acquired
+Raw publisher XLSX and Mendeley SAV are retained separately in Public_Datasets.
+The committee package contains only the PLOS pseudonymous derivative, source verification evidence and this memo. Source ID and file-number fields are omitted from the derivative.
+No public model has been trained. Public data must remain separate from institutional patient data.

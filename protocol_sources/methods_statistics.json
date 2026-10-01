@@ -1,0 +1,874 @@
+{
+  "1. Methodology": {
+    "title": "KeraNova — Research Methodology",
+    "subtitle": "Explainable prediction of 12-month corrected distance vision | Committee protocol, version 1.0 | 01 October 2026",
+    "sections": [
+      {
+        "heading": "1. Study question and intended use",
+        "paragraphs": [
+          "Can baseline clinical and corneal tomographic characteristics predict corrected distance visual acuity (CDVA), measured in logMAR, approximately 12 months after topography-guided photorefractive keratectomy plus accelerated corneal cross-linking (TG-PRK + ACXL) or accelerated CXL alone?",
+          "KeraNova is an exploratory research prototype. Its primary aim is to develop and internally evaluate a transparent prognostic model. Secondary aims are to describe one-year visual, refractive, keratometric and recorded safety outcomes in the two observed treatment cohorts. The model estimates outcomes under treatments actually received; it does not estimate individual causal treatment effects or recommend a procedure."
+        ]
+      },
+      {
+        "heading": "2. Design, setting and study population",
+        "paragraphs": [
+          "The design is an exclusively retrospective, single-centre observational cohort at the Anterior Segment Clinic, King Khaled Eye Specialist Hospital (KKESH), Riyadh, Saudi Arabia. The parent protocol identifies procedures performed from January 2020 through January 2025. The proposed extraction interprets this as 01 January 2020–31 January 2025 inclusive; the investigators must confirm the exact endpoints against the approved protocol before extraction is locked.",
+          "The parent study plans up to 60 eligible eyes, approximately 30 per treatment cohort, from available records. This is a planned convenience sample, not an achieved sample or a demonstration of adequate prediction-model sample size. Enumerate the full eligible source population and record the selection mechanism. If more eyes qualify than the authorized sample permits, agree and record an outcome-blinded selection rule before extraction; do not select eyes to balance outcomes or model performance."
+        ],
+        "table": {
+          "headers": [
+            "Requirement",
+            "Operational definition / evidence"
+          ],
+          "rows": [
+            [
+              "Age",
+              "At least 18 years at the index procedure; calculate from verified dates or use age documented at treatment."
+            ],
+            [
+              "Diagnosis and progression",
+              "Clinician-confirmed progressive keratoconus in the source record. Record the clinical evidence and adjudicator. A diagnosis label or severity stage alone does not establish progression."
+            ],
+            [
+              "Permitted treatment",
+              "Operative record verifies TG-PRK + ACXL or ACXL alone, including topography guidance and accelerated CXL parameters where applicable."
+            ],
+            [
+              "Corneal safety / contraindications",
+              "Adequate thickness and absence of ocular/systemic contraindications as judged in the treatment record; do not create a new universal thickness threshold."
+            ],
+            [
+              "Exclusions",
+              "Apply the approved parent criteria: previous corneal surgery, including keratoplasty or laser vision correction; other ocular disease affecting outcomes; uncontrolled diabetes (HbA1c >8.0% or recent ketoacidosis); active autoimmune connective-tissue disease associated with corneal melting; and pregnancy/lactation or planned pregnancy where required by the actual IRB determination."
+            ],
+            [
+              "Other procedures",
+              "PTK + CXL and unverified PRK/CXL variants are outside the prespecified primary cohorts; retain them in the screening log with the reason."
+            ],
+            [
+              "Insufficient evidence",
+              "Set eligibility to pending verification, rather than infer eligible or ineligible from a blank CSV field."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "3. Unit of observation and chronology",
+        "paragraphs": [
+          "The observation is an eye at its first eligible index treatment. A coded patient identifier links right and left eyes; an eye identifier and laterality identify the eye. Both eligible eyes may be retained if authorized, with patient-level clustering in all resampling and inference. Never infer patient linkage from age, sex or consecutive rows. Record any later retreatment or additional corneal procedure rather than treating it as a second independent baseline record.",
+          "Baseline is the closest valid, documented examination before the index procedure. Store its date, the interval to surgery, visual-acuity correction type and measurement quality. A measurement obtained on the procedure date is baseline only if the source establishes that it preceded treatment. Distant baseline examinations are flagged for clinical review and a prespecified sensitivity analysis; no undocumented narrow baseline window is imposed.",
+          "Select the primary follow-up within the inclusive interval from the index date plus 10 calendar months to the index date plus 14 calendar months. Choose the valid CDVA visit closest in absolute days to the 12-calendar-month anniversary; if equally close, choose the earlier visit. A visit outside this interval does not supply the primary endpoint. Preserve other dated visits for descriptive analysis. A nominal CSV column labelled 12 months is not sufficient to verify the window.",
+          "The parent text also mentions minimum follow-up of 12 months. The proposed clarification is to use its explicit 10–14-month endpoint window, allowing a valid visit before the anniversary. The clinical lead and research office must reconcile this wording with the approved protocol before primary analysis."
+        ]
+      },
+      {
+        "heading": "4. Outcomes and baseline predictors",
+        "table": {
+          "headers": [
+            "Role",
+            "Prespecified definition"
+          ],
+          "rows": [
+            [
+              "Primary outcome",
+              "Observed CDVA at the selected 10–14-month visit, in logMAR. Lower values indicate better vision."
+            ],
+            [
+              "Main predictors",
+              "Baseline CDVA (logMAR), age at treatment (years), recorded sex, verified treatment cohort, baseline Kmax (dioptres) and baseline thinnest corneal thickness (TCT, micrometres). TCT is the single prespecified pachymetry metric."
+            ],
+            [
+              "Clinical benchmark",
+              "Linear regression using baseline CDVA and treatment cohort, evaluated on the same eyes and splits as the main model. A training-set mean-only predictor supplies a reference."
+            ],
+            [
+              "Secondary continuous outcomes",
+              "UDVA, CDVA change, sphere, cylinder, spherical equivalent, K1, K2, Kmax and TCT at the selected visit where available; report paired denominators for changes."
+            ],
+            [
+              "Recorded safety outcomes",
+              "Documented haze and its grade, delayed epithelial healing, infection, retreatment and other complications. Unknown documentation remains unknown. Absence of a complication cannot be inferred from an empty field."
+            ],
+            [
+              "Exploratory scope",
+              "Other follow-up visits and clinical stability descriptions are descriptive. Haze resolution is not analysed as time-to-event without verified onset/resolution dates and censoring information."
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Only predictors known before treatment are eligible. Do not feed postoperative refraction, haze, corneal measurements or follow-up availability into the model. Retain visual-acuity source notation and convert verified Snellen/decimal measurements according to the cleaning and transformation documents. UDVA never substitutes for CDVA; counting fingers/hand movements do not receive an invented logMAR value.",
+          "Corneal stability is reported from available longitudinal measurements and clinician documentation. The protocol does not create an unsupported progression threshold or call a single stable measurement proof of arrested disease."
+        ]
+      },
+      {
+        "heading": "5. Data collection and quality control",
+        "paragraphs": [
+          "Authorized reviewers extract EHR and Pentacam measurements using the accompanying collection sheet and exact variable mapping. Keep an unchanged raw snapshot, a coded analytical file, a screening log and a correction/adjudication log. Verify eligibility, surgery details, patient/eye linkage, baseline CDVA and the primary outcome against source records. Resolve conflicting units, duplicate encounters and transcription concerns without replacing unusual valid observations merely because they are extreme.",
+          "Report missingness separately by variable and treatment cohort, including primary endpoint availability and reasons where documented. Missing primary outcomes are not imputed or replaced by last observation carried forward. Outcome-observed and outcome-missing eyes are compared descriptively on available baseline characteristics to assess potential follow-up selection bias."
+        ]
+      },
+      {
+        "heading": "6. Modelling, evaluation and sample adequacy",
+        "paragraphs": [
+          "The main model is ridge-penalized linear regression with the six prespecified predictor terms and an unpenalized intercept. Do not add interactions, polynomial terms, automated feature selection or a competition among high-capacity models to this small cohort. Preprocessing and penalty selection are learned inside training partitions only. The separate statistical plan fixes the model, benchmarks, resampling, uncertainty calculations and reporting.",
+          "Internal evaluation uses repeated nested cross-validation split by patient, preventing fellow-eye leakage. Report MAE as the primary performance metric, plus RMSE, calibration intercept/slope and uncertainty. Any performance measure from a fit evaluated on its own training records is labelled apparent, not internally validated. Repeated folds are correlated and do not create additional patients.",
+          "A biostatistician assesses adequacy using the number of independent patients, observed outcomes, predictor parameters, missingness, outcome variation and continuous-outcome sample-size criteria described by Riley et al. [2]. Document anticipated R-squared and precision assumptions before fitting, using external evidence where available. The planned 60 eyes is not an automatic adequacy threshold. If the required analysis cannot be supported, deliver the data audit and descriptive cohort results, and report model development as not executed."
+        ]
+      },
+      {
+        "heading": "7. Current extract and execution readiness",
+        "paragraphs": [
+          "The current root CSV is an unverified preliminary extract. The initial audit describes 79 eye-like records: 51 CXL/CXL-only, 27 PRK with CXL and one PTK with CXL. It reports only nine baseline corrected-vision entries and two nominal 12-month corrected-vision entries; one of the latter contains qualified Snellen notation requiring adjudication. It lacks patient identifiers and dates needed for linkage and endpoint verification. These counts are raw availability counts, not confirmed eligible cohorts or a model sample; repeat and retain the audit on the locked source snapshot.",
+          "Primary model development is not feasible on this extract. Obtain the authorized coded patient/eye export, dates, verified procedure definitions, source-checked baseline/endpoint CDVA and baseline predictors. Do not manufacture outcomes, infer patients, or switch the target to a more complete column and present it as the planned study."
+        ],
+        "table": {
+          "headers": [
+            "Gate",
+            "Evidence required before execution"
+          ],
+          "rows": [
+            [
+              "Governance",
+              "Recorded AI-extension IRB amendment or formal determination; authorized extraction/access and agreed protocol wording."
+            ],
+            [
+              "Identity and eligibility",
+              "Verified coded patient/eye identifiers, dated index procedure and source-adjudicated eligibility/cohorts."
+            ],
+            [
+              "Endpoint",
+              "Source-checked baseline CDVA and sufficient observed 10–14-month CDVA; valid units and outcome variation."
+            ],
+            [
+              "Analysis feasibility",
+              "Biostatistician documents sample adequacy, feasible grouped splits, predictor variation and missingness strategy."
+            ],
+            [
+              "Release",
+              "Freeze source snapshot, dictionary, transformations, analysis plan and software manifest before fitting; record subsequent amendments."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "8. Governance, public data and limitations",
+        "paragraphs": [
+          "The revised idea PDF describes the parent study as IRB-approved and requires an amendment or formal determination for the AI extension before execution. Verify the approval reference, applicable consent/waiver and allowed data use rather than treating the form's filename as proof of approval. The source IRB form contains both consent and waiver wording; use the IRB's actual determination. Coded identifiers stay in the analytic file; MRN and direct identifiers remain outside it, with access restricted to authorized staff and approved KKESH systems.",
+          "Public datasets may support a separately labelled image, diagnostic or software demonstration after licence and provenance checks. A keratoconus image/classification dataset does not supply a post-treatment 12-month CDVA target. External prognostic validation requires compatible baseline variables, verified treatment and longitudinal CDVA definitions, independent patients and an appropriate licence. Do not pool auxiliary images or synthetic records into the KKESH clinical outcome cohort.",
+          "Separate public-data feasibility option: the supporting workbook for Wajnsztajn et al. [4] provides CXL clinical data, with 613 records and 456 source patient IDs in the downloaded audit. Its nominal one-year logMAR field contains 336 entries; 334 have a paired baseline value across 251 source IDs before eligibility/quality exclusions. This enables assessment of a CXL-only prognostic prototype, separately from the KKESH study. It includes conventional and accelerated CXL, has no TG-PRK cohort, and lacks dates/laterality needed to verify the KKESH endpoint. Its source-reported central pachymetry is not TCT. Retain the licence/attribution, screen adults and unresolved duplicate/chronology flags, and label the target nominal one-year CDVA. This is a feasibility experiment, not external validation of the intended two-cohort model.",
+          "Expected limitations include convenience sampling, a small effective patient sample, missing follow-up, retrospective measurement inconsistency, treatment-selection confounding and single-centre generalizability. Penalization and internal validation reduce some risks but do not establish clinical safety, causal superiority or external validity. Reporting will follow TRIPOD+AI and design appraisal will use PROBAST+AI [1,3]."
+        ]
+      },
+      {
+        "heading": "9. Delivery and references",
+        "paragraphs": [
+          "Day 1: obtain authorized data, verify definitions and freeze the protocol. Day 2: perform the feasible prespecified analysis and validation. Day 3: clinical/biostatistical review and reproducible table/figure delivery. The committee package is a complete prospective analysis specification; all results remain unpopulated until evidence and readiness gates are satisfied.",
+          "[1] Collins GS et al. TRIPOD+AI statement. BMJ. 2024;385:e078378. https://doi.org/10.1136/bmj-2023-078378",
+          "[2] Riley RD et al. Calculating the sample size required for developing a clinical prediction model. BMJ. 2020;368:m441. https://doi.org/10.1136/bmj.m441",
+          "[3] Moons KGM et al. PROBAST+AI. BMJ. 2025;388:e082505. https://doi.org/10.1136/bmj-2024-082505",
+          "[4] Wajnsztajn D et al. Predicting factors for the efficacy of cross-linking for keratoconus. PLoS One. 2022;17:e0263528. https://doi.org/10.1371/journal.pone.0263528",
+          "Source protocol: revised KeraNova Project Idea PDF and supplied parent IRB application. Accompanying documents 2–7 form the implementation specification."
+        ]
+      }
+    ]
+  },
+  "6. Statistical_Plan": {
+    "title": "KeraNova — Statistical Analysis Plan",
+    "subtitle": "Primary target: observed 12-month CDVA in logMAR | Version 1.0 | 01 October 2026 | Freeze before model fitting",
+    "sections": [
+      {
+        "heading": "1. Objectives, estimands and populations",
+        "paragraphs": [
+          "The primary objective is prediction of observed 12-month CDVA (logMAR) from baseline measurements in eligible treated eyes. Primary performance is out-of-sample mean absolute error (MAE). The secondary cohort comparison estimates an observed baseline-adjusted difference in 12-month CDVA between TG-PRK + ACXL and ACXL alone. It is an association, not a randomized or causal treatment effect.",
+          "Screening population: all extracted records with individual exclusion/pending reasons. Descriptive population: all verified eligible eyes, including those without the primary outcome. Outcome population: eligible eyes with a dated, verified CDVA endpoint in the 10–14-calendar-month window. Main model population: the outcome population with a verified patient ID, baseline CDVA, age, recorded sex, cohort and baseline Kmax/TCT. Each analysis records eyes and unique patients separately. Both eligible eyes remain linked to the same patient in all splits and resampling."
+        ],
+        "table": {
+          "headers": [
+            "Endpoint",
+            "Definition and denominator"
+          ],
+          "rows": [
+            [
+              "Primary",
+              "CDVA at the valid visit nearest the 12-month anniversary within 10–14 calendar months; tie selects earlier visit. Denominator: eyes with this observed outcome."
+            ],
+            [
+              "Change",
+              "Follow-up minus baseline for the same eye. Negative CDVA/UDVA logMAR change indicates improvement; denominators require both observed values."
+            ],
+            [
+              "Secondary",
+              "UDVA, refraction, K1/K2/Kmax/TCT and documented complications, each using its available-case denominator."
+            ],
+            [
+              "Safety",
+              "Number of eyes with a documented event / number with documented assessment; separately show unknown/not assessed. Do not treat blanks as no event."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "2. Before analysis and feasibility rules",
+        "paragraphs": [
+          "First verify the AI-extension governance determination, index/visit dates, eligibility, procedure definitions, patient linkage, visual-acuity units and data dictionary. The preliminary CSV contains only two nominal 12-month corrected-vision observations and lacks patient codes/dates; it cannot support the prespecified model or a credible primary treatment comparison. On that extract, execute quality/descriptive reporting only and label model outputs not run.",
+          "There is no universal minimum-row rule that certifies adequacy. Before development, the biostatistician documents independent-patient count, complete endpoint count, six candidate slopes, outcome spread, cohort/predictor variation, missingness and an anticipated-performance/precision-based sample-size assessment [2]. Any sensitivity model with additional missingness indicators requires a separate complexity assessment. If grouped validation or calibration estimation is unstable, report that limitation or omit the unsupported estimate with a reason; do not present a successful numerical fit as proof of feasibility."
+        ]
+      },
+      {
+        "heading": "3. Descriptive analysis and missing data",
+        "paragraphs": [
+          "Report continuous baseline/outcome values with available n, mean and SD, and median and interquartile range; report categories as n/N (%) and missing n. Tabulate source availability and adjudication exclusions before producing clinical results. Describe baseline differences using standardized differences rather than significance testing to decide which variables enter the model.",
+          "The main model is complete-case for all six verified predictors and observed endpoint. Report exclusions and compare included versus excluded eyes descriptively. Do not impute CDVA outcomes, use last observation carried forward, substitute UDVA, or convert low-vision categories into assumed numeric targets.",
+          "If authorized data contains sufficient observed predictors/outcomes and complete-case loss is material, run a separately labelled sensitivity pipeline: require verified patient ID, cohort, baseline CDVA, age and sex; impute missing baseline Kmax/TCT using training-partition medians and add a missingness indicator for each. Learn imputation and scaling separately inside every inner and outer training partition. A predictor entirely unavailable or without meaningful variation prevents this sensitivity analysis. This evaluates a specific pragmatic preprocessing approach; it does not solve informative missingness."
+        ]
+      },
+      {
+        "heading": "4. Prespecified prediction models",
+        "table": {
+          "headers": [
+            "Model",
+            "Specification"
+          ],
+          "rows": [
+            [
+              "Main",
+              "Ridge linear regression: CDVA12 ~ CDVA0 + age + sex + treatment + Kmax0 + TCT0. Intercept unpenalized; six slopes, with no interactions/nonlinear terms."
+            ],
+            [
+              "Clinical benchmark",
+              "Ordinary linear regression: CDVA12 ~ CDVA0 + treatment. Same model-population records and validation partitions as main model."
+            ],
+            [
+              "Mean reference",
+              "Predict the training-partition mean CDVA12 for every test eye."
+            ],
+            [
+              "Coding",
+              "TG-PRK + ACXL=1, ACXL alone=0. Recorded male=1 and female=0 for the source categories; other/unknown categories trigger a documented coding amendment and complexity reassessment, rather than inference."
+            ],
+            [
+              "Preprocessing",
+              "Continuous predictors use training-partition mean and SD. No test-partition centering, imputation, outlier-based deletion or feature selection."
+            ],
+            [
+              "Penalty",
+              "For standardized design matrix Z, minimize mean squared residual + lambda × sum of squared slopes. Grid lambda={0.0001,0.001,0.01,0.1,1,10,100}. Pick lowest inner-CV MAE; ties choose larger lambda. Store software parameter mapping to this objective."
+            ]
+          ]
+        },
+        "paragraphs": [
+          "All models target continuous logMAR. No class balancing, oversampling or arbitrary dichotomization is used. Fit all three models on the same observations for paired performance comparisons. Model development uses eye-weighted loss; patients remain the independent resampling unit. A patient-weighted evaluation, assigning each patient's total weight equally across their included eyes, is a sensitivity analysis. No model choice is made from the outer test results."
+        ]
+      },
+      {
+        "heading": "5. Internal validation without information leakage",
+        "paragraphs": [
+          "Use 20 repeats of five-fold outer cross-validation grouped by coded patient ID. Allocate patients to folds with treatment balance where possible while keeping every patient's eyes together. Within each outer training set, use four-fold grouped inner cross-validation to choose the ridge penalty. Fit preprocessing and the selected model on the outer training set only, then predict every eye in its held-out patients. Save the fold allocation and each prediction. Use a recorded base random seed of 20261001 with deterministic derived repeat/resample seeds.",
+          "Require each training fold to contain the relevant treatment/sex levels, nonzero outcome variation and usable continuous predictors. Do not force an invalid five/four-fold analysis when the patient sample cannot support it. Any simpler resampling design requires a dated statistical amendment before performance is examined. A single random holdout is not the planned internal validation method.",
+          "For each repeat, pool its outer held-out predictions, so each eye contributes once to the repeat's MAE/RMSE and calibration. The main estimates are the mean of the 20 repeat-level metrics. Do not calculate confidence intervals from the distribution of fold scores or treat 20 predictions for one eye as 20 observations. A display may use each eye's mean held-out prediction, clearly identified as a visualization; metrics remain defined at repeat level.",
+          "After evaluation is complete, select the penalty with grouped inner validation on the entire development sample and refit the locked pipeline on those data for research demonstration. The final fit does not create a new validation estimate. Publish the intercept, coefficients, coding, scaling constants, penalty/objective and preprocessing necessary to reproduce predictions."
+        ]
+      },
+      {
+        "heading": "6. Performance, uncertainty and explanations",
+        "table": {
+          "headers": [
+            "Measure",
+            "Reporting rule"
+          ],
+          "rows": [
+            [
+              "MAE / RMSE",
+              "MAE = mean absolute observed-minus-predicted logMAR; RMSE = square root of mean squared residual. Both are reported in logMAR, with lower values indicating smaller error."
+            ],
+            [
+              "Calibration",
+              "Regress observed outcome on held-out prediction: y = a + b×prediction. Report intercept a (ideal 0), slope b (ideal 1), and mean prediction error (prediction minus observed; ideal 0). Omit slope if predictions have insufficient variation."
+            ],
+            [
+              "Incremental performance",
+              "Report main-minus-benchmark MAE and RMSE using the same resamples/eyes. Negative differences favour main model prediction error; no clinical superiority claim follows."
+            ],
+            [
+              "Prediction uncertainty",
+              "Do not confuse a CI for average performance or the predicted mean with a 95% interval for an individual outcome. Without a separately validated interval method, do not display individual 95% prediction intervals."
+            ],
+            [
+              "Explanation",
+              "Report standardized and original-unit ridge coefficients with resampling stability. Display associations, not causal effects. Coefficient rank alone is not a definitive importance or biological mechanism."
+            ],
+            [
+              "Subgroup checks",
+              "Describe errors by treatment and sex only with eyes/patients and uncertainty shown. Small cells are labelled too sparse for inference, not proof of fairness."
+            ]
+          ]
+        },
+        "paragraphs": [
+          "For approximate 95% CIs, perform 1,000 patient-cluster bootstrap resamples. Retain all eligible eyes of each sampled patient; all duplicate copies of a source patient remain in the same grouped fold. Repeat the entire preprocessing/tuning/nested evaluation pipeline and paired comparison within each resample, then use the 2.5th and 97.5th percentiles of the resample metrics. Record failed/infeasible resamples and reasons; report successful count and uncertainty limitations. If this procedure cannot yield stable feasible resamples, label intervals not estimable and do not replace them with naive fold-based intervals.",
+          "These bootstrap CIs are exploratory approximations: patient count can be small, resamples can lack strata/variation, and repeated validation has dependence. Wide or unstable intervals must remain visible. No significance threshold or desired accuracy number is used as a hackathon pass condition. Evidence of usefulness requires error improvement, reasonable calibration, stability and independent future validation."
+        ]
+      },
+      {
+        "heading": "7. Secondary cohort comparison and safety",
+        "paragraphs": [
+          "Describe baseline and follow-up measurements by verified treatment cohort. For the principal secondary comparison fit CDVA12 ~ treatment + CDVA0, using eyes with both observed values and verified patient linkage. The treatment coefficient represents the adjusted observed mean logMAR difference (combined minus ACXL alone). Obtain an approximate 95% CI by 1,000 patient-cluster bootstrap refits. If the sample cannot support the regression or clustered resampling, report unadjusted descriptive summaries with a clear reason. This comparison is not the main prediction model and does not tune its features.",
+          "For each remaining continuous outcome report paired change by cohort and an unadjusted difference in mean change with a patient-cluster bootstrap CI where feasible. Do not use an unpaired test on paired baseline/follow-up values or independent-eye standard errors for fellow eyes. These multiple secondary summaries are exploratory; emphasize effect sizes and CIs without confirmatory p-value claims.",
+          "Complications are descriptive n/N (%) with unknown assessment shown. Show documented CDVA worsening and improvement as continuous change; a categorical line-loss threshold requires an agreed chart/measurement definition before analysis. Haze grades are reported as recorded after harmonization. No haze-resolution survival curve is produced without verified dates and censoring rules."
+        ]
+      },
+      {
+        "heading": "8. Sensitivity analyses and deviations",
+        "bullets": [
+          "One eye per patient: select the first eligible index procedure, with a same-date bilateral tie resolved OD before OS; select without observing outcomes. Repeat main evaluation only if still feasible.",
+          "Missing Kmax/TCT: run the prespecified training-only imputation sensitivity in section 3 and compare its included population with complete cases.",
+          "Visual-acuity comparability: repeat summaries for observations with documented comparable correction/testing conditions; report exclusions.",
+          "Intervening procedures: retain real-world outcomes in the main descriptive population and show a sensitivity excluding documented additional corneal procedures before the endpoint.",
+          "Baseline timing: show the surgery-to-baseline interval distribution; any exclusion window for distant baseline must be clinically endorsed and recorded before performance is inspected.",
+          "Patient weighting: repeat prediction metrics with equal total patient weight to examine the influence of bilateral-eye inclusion."
+        ],
+        "paragraphs": [
+          "Every deviation states its date, rationale, approver and whether outcomes/performance were known. New image models, outcomes, feature sets or algorithms belong to separately labelled exploratory work. Public diagnostic datasets cannot be presented as external validation of 12-month post-treatment CDVA prediction."
+        ]
+      },
+      {
+        "heading": "9. Separate public CXL-only feasibility analysis",
+        "paragraphs": [
+          "If used, register the public supporting workbook of Wajnsztajn et al. [5] as a distinct source and experiment before fitting. Target the source-labelled one-year CDVA logMAR, not final-visit logMAR and not a verified 10–14-month KKESH endpoint. Candidate inputs are source baseline CDVA, age, recorded sex, Kmax and source-reported central pachymetry; do not rename pachymetry as TCT. Use a five-slope ridge model, baseline-CDVA-only clinical benchmark and training-mean reference. Source CXL protocol mix is summarized and accelerated-only results may be a prespecified sensitivity if adequate.",
+          "Apply adult/quality screening, source-ID grouping, complete-case predictors/outcome, training-only standardization and the same nested tuning/performance definitions as sections 4–6. Audit the patient ID with three records and negative follow-up metadata; exclude unresolved identity/chronology records conservatively with reasons while retaining their raw values. Because actual visit dates and laterality are absent, endpoint-window and eye-identity limitations remain explicit. Save its own population, dictionary and results under public feasibility; no merging with KKESH data, no TG-PRK comparison, no external-validation label. No public-model fitting or performance is claimed by this protocol."
+        ]
+      },
+      {
+        "heading": "10. Reproducibility and reporting",
+        "paragraphs": [
+          "SPSS 26 may supply descriptive/cohort outputs where available; an audited R or Python pipeline supplies grouped modelling and nested resampling. Save actual software/package versions, source file hash, code version, seeds, fold assignments, correction log, outcome selection log, model artefact and per-eye held-out predictions within authorized storage. Direct identifiers are excluded from reports, code and figures.",
+          "All table values reconcile to a saved analysis population and denominator. Check visual-acuity and change calculations independently, patient-group separation in every split, training-only preprocessing, and raw-versus-transformed traceability. Review clinical plausibility and the TRIPOD+AI reporting checklist; use PROBAST+AI to document development/evaluation concerns. Unexecuted outputs are labelled not run, not zero."
+        ]
+      },
+      {
+        "heading": "11. References",
+        "paragraphs": [
+          "[1] Collins GS et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ. 2024;385:e078378. https://doi.org/10.1136/bmj-2023-078378",
+          "[2] Riley RD et al. Calculating the sample size required for developing a clinical prediction model. BMJ. 2020;368:m441. https://doi.org/10.1136/bmj.m441",
+          "[3] Moons KGM et al. PROBAST+AI: updated quality, risk of bias, and applicability assessment. BMJ. 2025;388:e082505. https://doi.org/10.1136/bmj-2024-082505",
+          "[4] Vabalas A et al. Machine learning algorithm validation with a limited sample size. PLoS One. 2019;14:e0224365. https://doi.org/10.1371/journal.pone.0224365",
+          "[5] Wajnsztajn D et al. Predicting factors for the efficacy of cross-linking for keratoconus. PLoS One. 2022;17:e0263528. https://doi.org/10.1371/journal.pone.0263528"
+        ]
+      }
+    ]
+  },
+  "7. Dummy_Tables_and_Figures": {
+    "title": "KeraNova — Planned Tables and Figures",
+    "subtitle": "Committee output shells | Version 1.0 | 01 October 2026 | No invented clinical or model results",
+    "sections": [
+      {
+        "heading": "1. How to use these shells",
+        "paragraphs": [
+          "Replace each [pending] field only with a verified output from the locked analysis and its saved denominator. A shell is not a results table. Current endpoint/identifier deficiencies prevent the primary model: display not run — data readiness unmet in the submission rather than fabricated metrics. Raw extract counts must never be labelled the final eligible cohort.",
+          "Report eye counts and unique patient counts together. Continuous values use n, mean (SD) and median [IQR]; categories use n/N (%). Specify outcome availability, units and paired-change n. Unknown is separate from no/zero. The templates below correspond to the methodology and statistical plan.",
+          "Abbreviations: CDVA, corrected distance visual acuity; UDVA, uncorrected distance visual acuity; ACXL, accelerated corneal cross-linking; TG-PRK, topography-guided photorefractive keratectomy; TCT, thinnest corneal thickness; D, dioptres; MAE, mean absolute error; RMSE, root mean squared error; CI, confidence interval."
+        ]
+      },
+      {
+        "heading": "Table 1. Screening, cohort formation and endpoint availability",
+        "table": {
+          "headers": [
+            "Stage / reason",
+            "Eyes",
+            "Patients",
+            "Evidence / denominator"
+          ],
+          "rows": [
+            [
+              "Raw extract",
+              "79 eye-record rows",
+              "Unverified",
+              "Current CSV after four administrative headings; eligibility not established."
+            ],
+            [
+              "Verified eligible TG-PRK + ACXL",
+              "[pending]",
+              "[pending]",
+              "Operative record + eligibility adjudication."
+            ],
+            [
+              "Verified eligible ACXL alone",
+              "[pending]",
+              "[pending]",
+              "Operative record + eligibility adjudication."
+            ],
+            [
+              "Excluded: age under 18",
+              "[pending]",
+              "[pending]",
+              "Verified age at index treatment."
+            ],
+            [
+              "Excluded: other procedure / prior surgery / contraindication",
+              "[pending]",
+              "[pending]",
+              "Break out individual reasons in screening log."
+            ],
+            [
+              "Pending eligibility / procedure verification",
+              "[pending]",
+              "[pending]",
+              "No inference from blank source fields."
+            ],
+            [
+              "Eligible, primary endpoint unavailable",
+              "[pending]",
+              "[pending]",
+              "Missing CDVA / no valid visit / missing dates, shown separately."
+            ],
+            [
+              "Observed dated CDVA endpoint",
+              "[pending]",
+              "[pending]",
+              "Nearest valid visit in 10–14-month window."
+            ],
+            [
+              "Main complete-case prediction sample",
+              "[pending]",
+              "[pending]",
+              "Observed outcome plus all six predictors and patient linkage."
+            ],
+            [
+              "Model executed",
+              "Not run until ready",
+              "—",
+              "Feasibility and governance gate documented."
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: use one principal exclusion reason per eye for a reconcilable flow, and retain all reasons in the screening log. Planned 30 eyes per group must not appear as achieved numbers. The same patient may contribute to both treatment columns if fellow eyes received different procedures."
+        ]
+      },
+      {
+        "heading": "Table 2. Baseline characteristics of the verified eligible cohorts",
+        "table": {
+          "headers": [
+            "Characteristic",
+            "TG-PRK + ACXL",
+            "ACXL alone",
+            "Missing / note"
+          ],
+          "rows": [
+            [
+              "Eyes / unique patients",
+              "[n / N]",
+              "[n / N]",
+              "Report overall unique patients separately."
+            ],
+            [
+              "Age at index treatment, years",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[missing n per cohort]"
+            ],
+            [
+              "Recorded sex, categories",
+              "[n/N (%)]",
+              "[n/N (%)]",
+              "[unknown n]"
+            ],
+            [
+              "OD / OS",
+              "[n/N (%)]",
+              "[n/N (%)]",
+              "[unknown n]"
+            ],
+            [
+              "Baseline CDVA, logMAR",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[missing n]"
+            ],
+            [
+              "Baseline UDVA, logMAR",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[missing n]"
+            ],
+            [
+              "Sphere / cylinder / spherical equivalent, D",
+              "[separate rows in results]",
+              "[separate rows in results]",
+              "[missing n per measure]"
+            ],
+            [
+              "K1 / K2 / Kmax, D",
+              "[separate rows in results]",
+              "[separate rows in results]",
+              "[missing n per measure]"
+            ],
+            [
+              "TCT, micrometres",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[missing n]"
+            ],
+            [
+              "Amsler–Krumeich stage, if verified",
+              "[n/N (%) per stage]",
+              "[n/N (%) per stage]",
+              "[unknown n]"
+            ],
+            [
+              "Baseline-to-surgery interval, days",
+              "[n; median(IQR)]",
+              "[n; median(IQR)]",
+              "[missing date n]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: baseline is the nearest valid preoperative examination. Show standardized differences in a supplementary column if useful; do not use baseline p-values to choose model predictors. Sex/laterality percentages use known documented categories and explicitly state the denominator."
+        ]
+      },
+      {
+        "heading": "Table 3. Primary outcome availability and one-year vision",
+        "table": {
+          "headers": [
+            "Measure",
+            "TG-PRK + ACXL",
+            "ACXL alone",
+            "Comparison / explanation"
+          ],
+          "rows": [
+            [
+              "Endpoint available / eligible eyes",
+              "[n/N (%)]",
+              "[n/N (%)]",
+              "Dated CDVA in the selected window."
+            ],
+            [
+              "Actual follow-up interval, days",
+              "[n; median(IQR)]",
+              "[n; median(IQR)]",
+              "Use dates, not column labels."
+            ],
+            [
+              "12-month CDVA, logMAR",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[adjusted difference; 95% CI]"
+            ],
+            [
+              "CDVA change, logMAR",
+              "[paired n; mean(SD)]",
+              "[paired n; mean(SD)]",
+              "Follow-up minus baseline."
+            ],
+            [
+              "12-month UDVA, logMAR",
+              "[n; mean(SD); median(IQR)]",
+              "[n; mean(SD); median(IQR)]",
+              "[exploratory difference; 95% CI]"
+            ],
+            [
+              "UDVA change, logMAR",
+              "[paired n; mean(SD)]",
+              "[paired n; mean(SD)]",
+              "[difference in mean change; 95% CI]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: negative logMAR change means improved vision. Primary secondary-comparison difference is combined minus ACXL, adjusted for baseline CDVA using CDVA12 ~ treatment + CDVA0. CIs use patient-cluster bootstrap where feasible; all cohort comparisons are observational and exploratory. A missing estimate is labelled not estimable with its reason."
+        ]
+      },
+      {
+        "heading": "Table 4. Refraction and corneal measurements at one year",
+        "table": {
+          "headers": [
+            "Measure (unit)",
+            "Combined: endpoint / change",
+            "ACXL: endpoint / change",
+            "Difference in mean change"
+          ],
+          "rows": [
+            [
+              "Sphere (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "Cylinder (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "Spherical equivalent (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "K1 (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "K2 (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "Kmax (D)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ],
+            [
+              "TCT (micrometres)",
+              "[n; summary / paired n; change]",
+              "[n; summary / paired n; change]",
+              "[estimate; 95% CI]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: each endpoint uses the prespecified one-year visit and its own valid measurement availability. Summary means mean(SD) and median[IQR]; change is follow-up minus baseline for paired eyes. Expand rows/columns in final results for readability. Do not call a change beneficial or a proof of stability without clinical interpretation and longitudinal evidence."
+        ]
+      },
+      {
+        "heading": "Table 5. Recorded complications and additional procedures",
+        "table": {
+          "headers": [
+            "Recorded outcome",
+            "TG-PRK + ACXL",
+            "ACXL alone",
+            "Unknown / not assessed"
+          ],
+          "rows": [
+            [
+              "Any documented haze",
+              "[events / assessed (%)]",
+              "[events / assessed (%)]",
+              "[n per group]"
+            ],
+            [
+              "Haze grade at selected endpoint",
+              "[n/N (%) per grade]",
+              "[n/N (%) per grade]",
+              "[unknown grade n]"
+            ],
+            [
+              "Delayed epithelial healing",
+              "[events / assessed (%)]",
+              "[events / assessed (%)]",
+              "[n per group]"
+            ],
+            [
+              "Corneal infection",
+              "[events / assessed (%)]",
+              "[events / assessed (%)]",
+              "[n per group]"
+            ],
+            [
+              "Retreatment / additional corneal procedure",
+              "[n/N (%); procedure]",
+              "[n/N (%); procedure]",
+              "[unknown n]"
+            ],
+            [
+              "Other complication",
+              "[event; n/N (%)]",
+              "[event; n/N (%)]",
+              "[unknown n]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: no event requires explicit negative assessment or source-adjudicated documentation; an empty haze field is not no haze. Present descriptive events and assessment completeness. No haze-resolution curve is planned without dated onset/resolution and censoring evidence."
+        ]
+      },
+      {
+        "heading": "Table 6. Internally validated prediction performance",
+        "table": {
+          "headers": [
+            "Model / comparison",
+            "MAE, logMAR (95% CI)",
+            "RMSE, logMAR (95% CI)",
+            "Calibration intercept / slope"
+          ],
+          "rows": [
+            [
+              "Training mean reference",
+              "[not run / estimate]",
+              "[not run / estimate]",
+              "[intercept; slope not applicable if constant]"
+            ],
+            [
+              "Clinical benchmark: baseline CDVA + cohort",
+              "[not run / estimate]",
+              "[not run / estimate]",
+              "[a; b; 95% CIs]"
+            ],
+            [
+              "Ridge: six baseline predictors",
+              "[not run / estimate]",
+              "[not run / estimate]",
+              "[a; b; 95% CIs]"
+            ],
+            [
+              "Ridge minus benchmark",
+              "[paired difference; 95% CI]",
+              "[paired difference; 95% CI]",
+              "[descriptive comparison]"
+            ],
+            [
+              "Sensitivity: one eye per patient",
+              "[not run / estimate]",
+              "[not run / estimate]",
+              "[a; b; 95% CIs]"
+            ],
+            [
+              "Sensitivity: Kmax/TCT imputation",
+              "[not run / estimate]",
+              "[not run / estimate]",
+              "[a; b; 95% CIs]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Required footnotes: model-population eyes and unique patients; 20 repeats of grouped five-fold outer/four-fold inner validation; training-only preprocessing; penalty grid/objective; mean repeat-level metrics; 1,000 patient-cluster bootstrap attempts, successful number and failed reasons. Calibration ideal values are intercept 0 and slope 1. Fold scores are not independent observations. Label confidence intervals approximate and exploratory. Current data readiness is unmet, so no actual performance values are supplied."
+        ]
+      },
+      {
+        "heading": "Table 7. Final model transparency and missingness",
+        "table": {
+          "headers": [
+            "Predictor",
+            "Unit / coding",
+            "Final coefficient",
+            "Resampling stability / missing n"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "Original logMAR scale",
+              "[not run]",
+              "[bootstrap distribution]"
+            ],
+            [
+              "Baseline CDVA",
+              "Per 1 logMAR",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ],
+            [
+              "Age",
+              "Per 1 year",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ],
+            [
+              "Recorded sex",
+              "Male=1, female=0",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ],
+            [
+              "Treatment",
+              "Combined=1, ACXL alone=0",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ],
+            [
+              "Kmax",
+              "Per 1 D",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ],
+            [
+              "TCT",
+              "Per 1 micrometre",
+              "[not run]",
+              "[direction / distribution; missing n]"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Footnote: record final penalty/objective, scaling means/SDs and preprocessing with the model artefact. Ridge coefficients describe conditional predictive associations; no conventional unpenalized coefficient p-values or causal interpretation. Provide a supplementary missingness table for every variable, baseline/follow-up slot and cohort, and baseline characteristics of endpoint-observed versus endpoint-missing eyes."
+        ]
+      },
+      {
+        "heading": "2. Figure specifications",
+        "table": {
+          "headers": [
+            "Figure",
+            "Specification",
+            "Readiness / interpretation"
+          ],
+          "rows": [
+            [
+              "1. Cohort flow",
+              "Source records → verified cohorts → exclusions/pending → endpoint availability → prediction sample; eyes and patients at each stage.",
+              "Counts must reconcile; planned sample is a note, not a result."
+            ],
+            [
+              "2. Missingness map",
+              "Variables × record rows, with missing/observed/unverified distinctions; companion per-cohort percentage chart.",
+              "Can be produced from the current audit without claiming model readiness; no identifiers displayed."
+            ],
+            [
+              "3. Baseline-to-one-year CDVA",
+              "Paired eye trajectories or distribution plots by treatment; show paired n and actual window.",
+              "Only dated verified outcomes; do not connect unavailable observations."
+            ],
+            [
+              "4. Observed versus predicted CDVA",
+              "Held-out predictions versus observed logMAR; identity line, treatment colours and population n.",
+              "Requires valid grouped evaluation. Each eye's mean held-out prediction is a display summary, not extra data."
+            ],
+            [
+              "5. Calibration and residuals",
+              "Held-out calibration fit with identity line; residual-versus-prediction panel; show uncertainty and sparse-data limitations.",
+              "Continuous-outcome calibration; no arbitrary risk groups."
+            ],
+            [
+              "6. Predictor associations",
+              "Original-unit/standardized ridge coefficient plot with resampling variability and units.",
+              "Predictive associations; correlated features and shrinkage affect magnitude."
+            ],
+            [
+              "7. Error comparison",
+              "MAE/RMSE and paired ridge-minus-benchmark differences with approximate patient-cluster CIs.",
+              "No plot if model was not run; no clinical superiority or deployment claim."
+            ]
+          ]
+        },
+        "paragraphs": []
+      },
+      {
+        "heading": "Supplementary public-feasibility outputs",
+        "paragraphs": [
+          "If the separately registered public CXL-only experiment is executed, supply its own screening/missingness table, five-predictor model performance table, calibration plot and coefficient table. Use the label public CXL-only, nominal one-year CDVA throughout. Report source patient-ID counts, adult/quality exclusions, CXL protocol mix and unresolved date/laterality limitations. These results do not populate the KKESH treatment-comparison tables or establish external validation of its model."
+        ]
+      },
+      {
+        "heading": "3. Output verification and references",
+        "bullets": [
+          "Reconcile screening and analysis counts to the saved population and unique coded patients.",
+          "Check every unit, visual-acuity conversion and paired-change sign against the transformation specification.",
+          "Recalculate representative summary cells and model metrics independently from saved analytical data/predictions.",
+          "Confirm no patient appears in both training and test partitions, including bootstrap duplicates.",
+          "Show missingness, dates, failed resamples and analysis limitations; all unavailable results say not run or not estimable.",
+          "Inspect rendered tables and figures for clipped text, unreadable labels, fabricated precision and accidental identifiers."
+        ],
+        "paragraphs": [
+          "Reporting basis: Collins GS et al. TRIPOD+AI. BMJ. 2024;385:e078378. https://doi.org/10.1136/bmj-2023-078378",
+          "Development/evaluation appraisal: Moons KGM et al. PROBAST+AI. BMJ. 2025;388:e082505. https://doi.org/10.1136/bmj-2024-082505",
+          "Analysis definitions and denominator rules are governed by the accompanying Statistical Analysis Plan, version 1.0."
+        ]
+      }
+    ]
+  }
+}

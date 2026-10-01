@@ -1,0 +1,25 @@
+{
+  "checked_date": "2026-10-01",
+  "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263528",
+  "raw_sha256": "6ec96883486680c65944790272a5879744f3f747e4ba4fb02c3c359bb1ecfcbc",
+  "derivative_sha256": "bedb65d905a73a81a5b4ecc724fa2665132e590aa795ff24a184779a677099aa",
+  "outcome_counts": {
+    "numeric_baseline_logmar": 608,
+    "numeric_nominal_1Y_logmar": 336,
+    "numeric_baseline_and_1Y_pairs": 334,
+    "patients_with_pairs": 251,
+    "paired_accelerated_records": 221,
+    "paired_nonaccelerated_records": 113,
+    "nominal_1Y_decimal_to_logmar_checked": 336,
+    "conversion_mismatches_at_tolerance_0_000001": 0
+  },
+  "limitations": [
+    "Visit dates and laterality absent; the 10-14-month window cannot be verified",
+    "One source patient identifier has three rows",
+    "79 numeric last-follow-up durations are negative and require source review",
+    "Whitespace strings encode missing values",
+    "Correction-method labels need review before harmonizing spectacle CDVA",
+    "No linked images",
+    "Paper's 385 last-follow-up LogMAR analyses differ from nominal 1Y availability"
+  ]
+}

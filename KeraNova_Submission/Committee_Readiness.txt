@@ -1,0 +1,65 @@
+KeraNova Committee Package
+Version 1.0 | 1 October 2026
+
+Submission purpose
+The seven completed documents specify the retrospective study and exploratory
+prediction of twelve-month corrected distance visual acuity (CDVA) in logMAR.
+They are a protocol, collection specification and analysis plan, not completed
+clinical results or a trained model. Collection entry spaces and dummy-table
+shells are intentionally unpopulated. No performance metrics were fabricated.
+
+Completed
+1. Methodology aligned with the revised KeraNova proposal.
+2. Eye-level collection form, eligibility checklist and dated visit form.
+3. Mapping of all 42 exact CSV headers and required missing source fields.
+4. Cleaning rules, review triggers, missing codes and correction provenance.
+5. Calendar-based endpoint selection, derivations and analysis populations.
+6. Prespecified ridge model, benchmark, patient-grouped validation and uncertainty.
+7. Clinical, safety and prediction table shells and figure specifications.
+
+Current institutional data status
+The unchanged CSV contains 79 eye-like records and four administrative headings.
+Treatment labels: 27 PRK with CXL, 51 CXL/CXL-only and one PTK with CXL.
+Only nine baseline and two nominal twelve-month corrected-vision fields are
+populated. One endpoint is qualified Snellen notation requiring adjudication.
+Neither patient linkage nor actual treatment/visit dates is present. No verified
+primary-window target can be released from this extract. These counts are not
+the achieved eligible study sample. Primary institutional modelling was not run.
+
+Public-data option
+The PLOS derivative provides a distinct CXL-only nominal-one-year experiment,
+with 334 baseline/one-year pairs across 251 source IDs before further screening.
+Its conventional/accelerated CXL mix has no TG-PRK comparator and no actual visit
+dates or laterality. Source patient identity anomalies, negative last-follow-up
+metadata, adulthood and correction methods require review. Central pachymetry
+must not be renamed TCT. This option does not validate the institutional model.
+CornOrb offers diagnostic corneal maps, not treatment-outcome targets.
+
+Investigator and biostatistician decisions
+- Confirm the primary CDVA target and the six baseline predictor terms.
+- Confirm exact treatment-period boundaries and the operative procedure types.
+- Reconcile minimum twelve-month follow-up with the ten-to-fourteen-month window.
+- Confirm the progressive-keratoconus evidence and procedure-specific eligibility.
+- Resolve parent pregnancy/lactation and consent/waiver wording against the
+  actual IRB determination; verify AI-extension amendment/formal determination.
+- Recover coded patient/eye IDs, dated baseline and follow-up CDVA and true TCT.
+- Evaluate independent-patient sample adequacy before the specified validation.
+- Confirm the separate public-feasibility protocol before public model fitting.
+
+Verification performed
+Independent agents reviewed clinical/statistical consistency and the source data.
+All exact CSV columns were mapped; source availability and public endpoints were
+recounted. Public one-year logMAR and decimal BCVA reconciled in 336 available
+records. The seven saved DOCX packages reopened and passed content checks.
+Every final page preview was inspected, with layout corrections applied.
+The native Word/LibreOffice renderer was unavailable on this host. A local
+Aspose evaluation renderer was used only for internal previews; mapping and
+table documents were reviewed as their explicitly paginated chapters. Native
+Word pagination was not independently verified. Final DOCX files contain no
+Aspose evaluation marks, and no intermediate PDFs/PNGs are included here.
+
+What remains
+Clinical/IRB decisions and source-data verification remain required before
+institutional analysis. No external committee submission has been sent.
+Original glaucoma templates are preserved in Original_Glaucoma_Templates_2026-10-01.
+The requested seven root files now contain the completed KeraNova versions.

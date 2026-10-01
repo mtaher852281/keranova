@@ -1,0 +1,2 @@
+# Document builder only. Model-development dependencies are not yet specified.
+python-docx==1.2.0
